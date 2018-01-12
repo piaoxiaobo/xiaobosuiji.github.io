@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://www.itsolotime.com/2018/01/11/%E6%94%B9%E7%89%88%E8%AF%B4%E6%98%8E/</loc>
+    <lastmod>2018-01-12T16:09:15.860Z</lastmod>
+    <data>
+        <display>
+        <title>博客全新改版啦</title>
+        <pubTime>2018-01-11T12:25:58.000Z</pubTime>
+        
+        <tag>改版</tag>
+         
+        <tag>龙云全栈</tag>
+         
+         
+           
+             
+              <breadCrumb title="博客" url="http://www.itsolotime.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>http://www.itsolotime.com/2018/01/11/test/</loc>
+    <lastmod>2018-01-11T16:23:41.374Z</lastmod>
+    <data>
+        <display>
+        <title>测试</title>
+        <pubTime>2018-01-11T12:25:58.000Z</pubTime>
+        
+        <tag>test</tag>
+         
+         
+           
+             
+              <breadCrumb title="测试" url="http://www.itsolotime.com/categories/%E6%B5%8B%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>

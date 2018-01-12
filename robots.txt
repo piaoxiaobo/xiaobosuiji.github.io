@@ -1,0 +1,10 @@
+User-agent: * 
+Allow: /
+Allow: /archives/
+
+Disallow: /fonts/
+Disallow: /vendors/
+
+Sitemap: http://www.itsolotime.com/sitemap.xml
+Sitemap: http://www.itsolotime.com/baidusitemap.xml
+

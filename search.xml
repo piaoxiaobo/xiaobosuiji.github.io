@@ -1,26 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[博客全新改版啦]]></title>
-    <url>%2F2018%2F01%2F11%2F%E6%94%B9%E7%89%88%E8%AF%B4%E6%98%8E%2F</url>
-    <content type="text"><![CDATA[不必哀悼过去，更不要忧愁未来。 ##小泊随記 感谢你的到来12小泊的博客改版啦~记得经常来光顾哦.... 提醒还有很多功能依旧在开发中哦！ 敬请期待。 感谢 @龙云全栈 技术文档支持。 本文作者：漂小泊本文地址： http://www.itsolotime.com/2018/01/11/改版说明/ 版权声明：转载请注明出处！]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>改版</tag>
-        <tag>龙云全栈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[测试]]></title>
-    <url>%2F2018%2F01%2F11%2Ftest%2F</url>
-    <content type="text"><![CDATA[不必哀悼过去，更不要忧愁未来。 本文作者：漂小泊本文地址： http://www.itsolotime.com/2018/01/11/test/ 版权声明：转载请注明出处！]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[测试]]></title>
+      <url>/2018/01/11/test/</url>
+      <content type="html"><![CDATA[<p>不必哀悼过去，更不要忧愁未来。</p>
+<a id="more"></a>
+<p><strong>本文作者</strong>：漂小泊<br><strong>本文地址</strong>： <a href="http://www.itsolotime.com/2018/01/11/test/">http://www.itsolotime.com/2018/01/11/test/</a> <br><strong>版权声明</strong>：转载请注明出处！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 测试 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[博客全新改版啦]]></title>
+      <url>/2018/01/11/%E6%94%B9%E7%89%88%E8%AF%B4%E6%98%8E/</url>
+      <content type="html"><![CDATA[<p>不必哀悼过去，更不要忧愁未来。</p>
+<p>##小泊随記</p>
+<h3 id="感谢你的到来"><a href="#感谢你的到来" class="headerlink" title="感谢你的到来"></a>感谢你的到来</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">小泊的博客改版啦~</span><br><span class="line">记得经常来光顾哦....</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="提醒"><a href="#提醒" class="headerlink" title="提醒"></a>提醒</h2><p>还有很多功能依旧在开发中哦！</p>
+<p>敬请期待。</p>
+<p>感谢 <a href="http://www.longestory.com/" target="_blank" rel="noopener">@龙云全栈</a> 技术文档支持。</p>
+<p><strong>本文作者</strong>：漂小泊<br><strong>本文地址</strong>： <a href="http://www.itsolotime.com/2018/01/11/改版说明/">http://www.itsolotime.com/2018/01/11/改版说明/</a> <br><strong>版权声明</strong>：转载请注明出处！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 博客 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 改版 </tag>
+            
+            <tag> 龙云全栈 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
 </search>

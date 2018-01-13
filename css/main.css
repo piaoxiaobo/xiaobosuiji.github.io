@@ -1981,7 +1981,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0f8eff;
+  background: #ffff8e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2849,9 +2849,26 @@ embed {
   -webkit-box-shadow: 0 0 5px #000;
   -moz-box-shadow: 0 0 5px #000;
 }
-#posts_top {
-  height: 100px;
-  width: 100px;
+@media screen and (max-width: 768px) {
+  #posts_top {
+    height: 50px;
+    width: 50px;
+    background: url("http://mumu.itsolotime.com/img/post-top-50.png") no-repeat;
+  }
+}
+@media screen and (min-width: 768px) {
+  #posts_top {
+    height: 75px;
+    width: 75px;
+    background: url("http://mumu.itsolotime.com/img/post-top-75.png") no-repeat;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #posts_top {
+    height: 100px;
+    width: 100px;
+    background: url("http://mumu.itsolotime.com/img/post-top-100.png") no-repeat;
+  }
 }
 code {
   color: #ff7600;

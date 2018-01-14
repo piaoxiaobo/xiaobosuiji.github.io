@@ -1981,7 +1981,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #33ff8c;
+  background: #2d33ac;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2885,4 +2885,13 @@ pre {
 code,
 pre {
   border: 1px solid #d6d6d6;
+}
+#footer-user {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  border-bottom: 0;
+  font-weight: bold;
+}
+#footer-ipc {
+  border-bottom: 0;
 }

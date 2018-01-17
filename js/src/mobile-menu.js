@@ -1,1 +1,27 @@
-function mobileMenu(){var t=document.getElementById("mobilenav");t.addEventListener("touchstart",function(n){(t.style.display="none")?t.style.display="block":(t.style.display="block")&&(t.style.display="none"),n.stopPropagation()}),document.addEventListener("touchstart",function(){(t.style.display="block")&&(t.style.display="none")}),t.addEventListener("touchstart",function(t){t.stopPropagation()})}window.onload=mobileMenu();
+window.onload=mobileMenu();
+function mobileMenu(){
+  var mobilenav = document.getElementById('mobilenav');
+
+
+  mobilenav.addEventListener('touchstart',function(event){
+
+    if(mobilenav.style.display = 'none'){
+
+      mobilenav.style.display = 'block';
+    }else if(mobilenav.style.display = 'block'){
+      mobilenav.style.display = 'none';
+    }
+
+    event.stopPropagation();
+  });
+  document.addEventListener('touchstart',function(){
+    if(mobilenav.style.display = 'block'){
+
+      mobilenav.style.display = 'none';
+    }
+  });
+  mobilenav.addEventListener('touchstart',function(event){
+
+    event.stopPropagation();
+  });
+}

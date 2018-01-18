@@ -5,22 +5,22 @@
     
   <url>
     <loc>http://www.itsolotime.com/2018/01/18/Scrolling%20bulletin%20board/</loc>
-    <lastmod>2018-01-18T12:19:51.577Z</lastmod>
+    <lastmod>2018-01-18T12:22:53.671Z</lastmod>
     <data>
         <display>
         <title>滚动的公告栏（含"标签"源码）</title>
         <pubTime>2018-01-18T08:24:54.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>前端开发</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>原生js</tag>
          
          
            
              
-              <breadCrumb title="功能合集" url="http://www.itsolotime.com/categories/%E5%8A%9F%E8%83%BD%E5%90%88%E9%9B%86/"/>
+              <breadCrumb title="工具箱" url="http://www.itsolotime.com/categories/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
           
         </display>
     </data>
@@ -36,11 +36,11 @@
         <title>小泊陪你学前端</title>
         <pubTime>2018-01-18T01:31:37.401Z</pubTime>
         
-        <tag>前端开发</tag>
-         
         <tag>小泊陪你学前端</tag>
          
         <tag>原创</tag>
+         
+        <tag>前端开发</tag>
          
          
            

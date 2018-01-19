@@ -1,0 +1,30 @@
+#noticewrap ul {
+  list-style: none;
+}
+
+#noticewrap {
+  width: 399px;
+  border: 2px solid red;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px yellow;
+  margin: 50px auto;
+}
+
+#noticecontent {
+  height: 144px;
+  width: 335px;
+  margin-left: 25px;
+  /*margin-top: 5px;*/
+  overflow: hidden;
+}
+#noticewrap ul li {
+  height: 24px;
+}
+#noticewrap ul li a {
+  float: left;
+  text-indent: 15px;
+}
+#noticewrap ul li span {
+  float: right;
+  color: #999;
+}

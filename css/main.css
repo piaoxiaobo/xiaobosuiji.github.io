@@ -1992,7 +1992,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffcd40;
+  background: #b0a4ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3206,6 +3206,9 @@ pre .javascript .function {
   }
   .site-meta {
     background: transparent;
+  }
+  .content-wrap {
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {

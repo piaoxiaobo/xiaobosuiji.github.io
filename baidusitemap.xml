@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://www.itsolotime.com/2018/01/18/course%20description/</loc>
+    <lastmod>2018-01-20T02:45:04.418Z</lastmod>
+    <data>
+        <display>
+        <title>小泊陪你学前端</title>
+        <pubTime>2018-01-18T01:31:37.401Z</pubTime>
+        
+        <tag>前端开发</tag>
+         
+        <tag>小泊陪你学前端</tag>
+         
+        <tag>原创</tag>
+         
+         
+           
+             
+              <breadCrumb title="课程" url="http://www.itsolotime.com/categories/%E8%AF%BE%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.itsolotime.com/2018/01/18/Scrolling%20bulletin%20board/</loc>
-    <lastmod>2018-01-19T16:04:13.324Z</lastmod>
+    <lastmod>2018-01-20T02:35:37.462Z</lastmod>
     <data>
         <display>
         <title>滚动的公告栏（含"标签"源码）</title>
@@ -20,7 +44,7 @@
          
            
              
-              <breadCrumb title="小功能盒" url="http://www.itsolotime.com/categories/%E5%B0%8F%E5%8A%9F%E8%83%BD%E7%9B%92/"/>
+              <breadCrumb title="小功能" url="http://www.itsolotime.com/categories/%E5%B0%8F%E5%8A%9F%E8%83%BD/"/>
           
         </display>
     </data>
@@ -49,30 +73,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://www.itsolotime.com/2018/01/18/course%20description/</loc>
-    <lastmod>2018-01-18T08:07:10.337Z</lastmod>
-    <data>
-        <display>
-        <title>小泊陪你学前端</title>
-        <pubTime>2018-01-18T01:31:37.401Z</pubTime>
-        
-        <tag>前端开发</tag>
-         
-        <tag>小泊陪你学前端</tag>
-         
-        <tag>原创</tag>
-         
-         
-           
-             
-              <breadCrumb title="原创课程" url="http://www.itsolotime.com/categories/%E5%8E%9F%E5%88%9B%E8%AF%BE%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://www.itsolotime.com/2018/01/11/Revised%20instructions/</loc>

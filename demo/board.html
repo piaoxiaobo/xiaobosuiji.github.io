@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>label</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            color: #333;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff0000;
+        }
+        #wrap {
+            width: 399px;
+            border: 2px solid red;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px yellow;
+            margin: 50px auto;
+        }
+
+        #title {
+            height: 62px;
+            overflow: hidden;
+            font-size: 26px;
+            line-height: 62px;
+            /*border-bottom: 2px solid red;*/
+            color: red;
+            text-align: center;
+        }
+        #title a {
+            position: absolute;
+            color: #fff;
+            font-size: 12px;
+            line-height: 24px;
+        }
+        #content {
+            height: 144px;
+            width: 335px;
+            margin-left: 25px;
+            /*margin-top: 5px;*/
+            overflow: hidden;
+        }
+        #wrap ul li {
+            height: 24px;
+        }
+        #wrap ul li a {
+            float: left;
+            text-indent: 15px;
+        }
+        #wrap ul li span {
+            float: right;
+            color: #999;
+        }
+
+    </style>
+</head>
+<body>
+<div  id="wrap">
+    <h3 id="title">公告栏</h3>
+    <div  id="content">
+        <ul id="list1">
+            <li><a href="#">1.你吃了吗？吃什么了？</a><span>2018-01-18</span></li>
+            <li><a href="#">2.你睡了吗？怎么还不睡啊？</a><span>2018-01-18</span></li>
+            <li><a href="#">3.你瞅啥呢？不要老瞅我！</a><span>2018-01-18</span></li>
+            <li><a href="#">4.天亮了，你怎么还没睡啊！</a><span>2018-01-18</span></li>
+            <li><a href="#">5.听说今天不上课，你起那么早干啥啊！</a><span>2018-01-18</span></li>
+            <li><a href="#">6.你又出去玩了啊，我也想出去玩！</a><span>2018-01-18</span></li>
+            <li><a href="#">7.天冷了，多穿点衣服呀，别冻着了！</a><span>2018-01-18</span></li>
+            <li><a href="#">8.你听得啥歌？我也想听哎~</a><span>2018-01-18</span></li>
+            <li><a href="#" style="font-weight: bold;color:red">9.我是最后一条了，可是我还会回来的</a><span>2018-01-18</span></li>
+        </ul>
+        <ul id="list2"></ul>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+
+    var content = document.getElementById('content');
+    var list1 = document.getElementById('list1');
+    var list2 = document.getElementById('list2');
+    var speed = 50;
+    content.scrollTop = 0;
+    list2.innerHTML = list1.innerHTML;
+    function scrollUp(){
+        if(content.scrollTop >= list1.scrollHeight) {
+            content.scrollTop = 0;
+        }else{
+            content.scrollTop ++;
+        }
+    }
+    var textScroll = setInterval("scrollUp()",speed);
+    content.onmouseover = function(){
+        clearInterval(textScroll);
+    }
+    content.onmouseout = function(){
+        textScroll = setInterval("scrollUp()",speed);
+    }
+</script>
+
+</html>

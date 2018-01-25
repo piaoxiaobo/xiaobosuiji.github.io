@@ -51,7 +51,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -59,21 +59,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=">
+<link href="/blog/css/main.css?v=" rel="stylesheet" type="text/css" />
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=" color="#222">
 
 
 
@@ -93,7 +93,7 @@
 <meta name="description" content="尽可能让遗憾少一些。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="小泊随記">
-<meta property="og:url" content="http://www.itsolotime.com/index.html">
+<meta property="og:url" content="http://www.itsolotime.com/blog/index.html">
 <meta property="og:site_name" content="小泊随記">
 <meta property="og:description" content="尽可能让遗憾少一些。">
 <meta property="og:locale" content="zh-Hans">
@@ -106,7 +106,7 @@
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/blog/',
     scheme: 'Pisces',
     version: '',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://www.itsolotime.com/"/>
+  <link rel="canonical" href="http://www.itsolotime.com/blog/"/>
 
 
 
@@ -157,6 +157,9 @@
 
   <!-- QPlayer -->
   <link href="http://mumu.itsolotime.com/css/player.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+
+  </style>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -176,7 +179,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/blog/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">小泊随記</span>
         <span class="logo-line-after"><i></i></span>
@@ -204,7 +207,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/blog/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -214,7 +217,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/blog/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -224,7 +227,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/blog/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -234,7 +237,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/blog/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -244,7 +247,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/blog/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -254,7 +257,7 @@
       
         
         <li class="menu-item menu-item-logs">
-          <a href="/logs/" rel="section">
+          <a href="/blog/logs/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-paste"></i> <br />
             
@@ -310,8 +313,23 @@
     </header>
 
     <main id="main" class="main">
+
       <div class="main-inner">
+
         <div class="content-wrap">
+
+       <!-- scroll bars-->
+       <div id="rollcontent">
+            <ul id="rolllist">
+
+                <li><img  src="images/bulletin.gif" alt="">欢迎您到访小泊随記，很高兴认识你！</li>
+                <li><img  src="images/bulletin.gif" alt="">点击右下角的小姑娘可以返回主页的哦~</li>
+                <li><img  src="images/bulletin.gif" alt="">要放假了，小泊还是很开心哒(づ￣ 3￣)づ</li>
+                <li><img  src="images/bulletin.gif" alt="">文章有错字，记得在文章留言区给小泊留言哦~</li>
+                <li><img  src="images/bulletin.gif" alt="">生活不止眼前的苟且，还有诗和远方。</li>
+            </ul>
+        </div>
+
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -331,12 +349,12 @@
 
   <div class="post-block">
 
-    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/2018/01/11/Revised instructions/">
+    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/blog/blog/2018/01/11/Revised instructions/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="漂小泊">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -351,7 +369,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/11/Revised instructions/" itemprop="url">博客全新改版</a></h2>
+                <a class="post-title-link" href="/blog/2018/01/11/Revised instructions/" itemprop="url">博客全新改版</a></h2>
         
 
         <div class="post-meta">
@@ -386,7 +404,7 @@
 
           
           
-             <span id="/2018/01/11/Revised instructions/" class="leancloud_visitors" data-flag-title="博客全新改版">
+             <span id="/blog/2018/01/11/Revised instructions/" class="leancloud_visitors" data-flag-title="博客全新改版">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -413,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  621
+                  622
                 </span>
               
 
@@ -443,7 +461,7 @@
 <h2 id="发展历程"><a href="#发展历程" class="headerlink" title="发展历程"></a>发展历程</h2><h3 id="xinghe110-星河110"><a href="#xinghe110-星河110" class="headerlink" title="xinghe110(星河110)"></a>xinghe110(星河110)</h3><p>2014年注册域名”Xinghe110”并使用-2015年弃用<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/01/11/Revised instructions/#more" rel="contents">
+            <a class="btn" href="/blog/2018/01/11/Revised instructions/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -496,12 +514,12 @@
 
   <div class="post-block">
 
-    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/2018/01/19/Who did you meet/">
+    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/blog/blog/2018/01/25/node.js usage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="漂小泊">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -516,7 +534,557 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/19/Who did you meet/" itemprop="url">余生，和珍惜你的人在一起</a></h2>
+                <a class="post-title-link" href="/blog/2018/01/25/node.js usage/" itemprop="url">Node.js介绍和安装</a></h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T10:31:24+08:00">
+                2018-01-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/工具箱/" itemprop="url" rel="index">
+                    <span itemprop="name">工具箱</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/blog/2018/01/25/node.js usage/" class="leancloud_visitors" data-flag-title="Node.js介绍和安装">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读量&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,366
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>生活不只是眼前的苟且，还有诗和远方。</p>
+<h3 id="Node-js简介"><a href="#Node-js简介" class="headerlink" title="Node.js简介"></a>Node.js简介</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p><strong>Node.js</strong>是一个能够在服务器端运行JavaScript的开放源代码、跨平台<strong>JavaScript运行环境</strong>。采用Google开发的<strong>V8引擎</strong>运行js代码，使用<strong>事件驱动、非阻塞和异步I/O模型</strong>等技术来提高性能，可优化应用程序的传输量和规模。大部分基本模块都用JavaScript编写。在Node出现之前，JS通常作为客户端程序设计语言使用，以JS写出的程序常在用户的浏览器上运行。</p>
+<p>目前，Node.js已被IBM、Microsoft、Yahoo!、Walmart、Groupon、SAP、 LinkedIn、Rakuten、PayPal、Voxer和GoDaddy等企业采用。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2018/01/25/node.js usage/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+
+  <div class="post-block">
+
+    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/blog/blog/2018/01/23/linux route/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="漂小泊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小泊随記">
+    </span>
+
+    
+
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/01/23/linux route/" itemprop="url">linux软路由设置</a></h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-23T18:08:42+08:00">
+                2018-01-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/运维/" itemprop="url" rel="index">
+                    <span itemprop="name">运维</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/blog/2018/01/23/linux route/" class="leancloud_visitors" data-flag-title="linux软路由设置">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读量&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  372
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>因为心无所恃，所以才随遇而安​​。</p>
+<h3 id="情况说明"><a href="#情况说明" class="headerlink" title="情况说明"></a>情况说明</h3><p>在很多情况下，当我们为某些政府单位安装服务器时，经常会遇到客户要求我们进行“软路由”的配置，以达到实现内外网共通。在外部我们通过外网可以访问该服务器，在内部我们也可以通过单位的内网进行访问服务器。今天小泊就来介绍下linux系统内的“软路由”配置。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2018/01/23/linux route/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+
+  <div class="post-block">
+
+    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/blog/blog/2018/01/22/Webstorm usage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="漂小泊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小泊随記">
+    </span>
+
+    
+
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/01/22/Webstorm usage/" itemprop="url">Webstorm的安装和激活</a></h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-22T20:42:39+08:00">
+                2018-01-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/工具箱/" itemprop="url" rel="index">
+                    <span itemprop="name">工具箱</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/blog/2018/01/22/Webstorm usage/" class="leancloud_visitors" data-flag-title="Webstorm的安装和激活">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读量&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  686
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>因为心无所恃，所以才随遇而安​​。​</p>
+<h2 id="WebStorm介绍"><a href="#WebStorm介绍" class="headerlink" title="WebStorm介绍"></a>WebStorm介绍</h2><p><strong>WebStorm</strong>是jetbrains公司旗下一款JavaScript 开发工具。目前已经被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的JavaScript IDE”等。与IntelliJ IDEA同源，继承了IntelliJ IDEA强大的JS部分的功能。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2018/01/22/Webstorm usage/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+
+  <div class="post-block">
+
+    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/blog/blog/2018/01/19/Who did you meet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="漂小泊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小泊随記">
+    </span>
+
+    
+
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/01/19/Who did you meet/" itemprop="url">余生，和珍惜你的人在一起</a></h2>
         
 
         <div class="post-meta">
@@ -552,7 +1120,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生活感悟/" itemprop="url" rel="index">
+                  <a href="/blog/categories/生活感悟/" itemprop="url" rel="index">
                     <span itemprop="name">生活感悟</span>
                   </a>
                 </span>
@@ -569,7 +1137,7 @@
 
           
           
-             <span id="/2018/01/19/Who did you meet/" class="leancloud_visitors" data-flag-title="余生，和珍惜你的人在一起">
+             <span id="/blog/2018/01/19/Who did you meet/" class="leancloud_visitors" data-flag-title="余生，和珍惜你的人在一起">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -596,7 +1164,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  624
+                  625
                 </span>
               
 
@@ -623,12 +1191,10 @@
       
         
           <p>决定一个人幸福的，往往不是”你是谁”，而是”你遇到了谁”。​</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=5257591&auto=0&height=66"></iframe>
-
 <p>你再单纯，遇到城府深的人，你就会是有心机的人；你再善良，遇到心眼坏的人，你就会是爱矫情的人；你付出再多，遇到一个不会珍惜你的人，你就会是一文不值的。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/01/19/Who did you meet/#more" rel="contents">
+            <a class="btn" href="/blog/2018/01/19/Who did you meet/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -681,12 +1247,12 @@
 
   <div class="post-block">
 
-    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/2018/01/18/Scrolling bulletin board/">
+    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/blog/blog/2018/01/18/Scrolling bulletin board/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="漂小泊">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -701,7 +1267,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/18/Scrolling bulletin board/" itemprop="url">滚动的公告栏（含"标签"源码）</a></h2>
+                <a class="post-title-link" href="/blog/2018/01/18/Scrolling bulletin board/" itemprop="url">滚动的公告栏（含"标签"源码）</a></h2>
         
 
         <div class="post-meta">
@@ -737,7 +1303,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/小功能/" itemprop="url" rel="index">
+                  <a href="/blog/categories/小功能/" itemprop="url" rel="index">
                     <span itemprop="name">小功能</span>
                   </a>
                 </span>
@@ -754,7 +1320,7 @@
 
           
           
-             <span id="/2018/01/18/Scrolling bulletin board/" class="leancloud_visitors" data-flag-title="滚动的公告栏（含"标签"源码）">
+             <span id="/blog/2018/01/18/Scrolling bulletin board/" class="leancloud_visitors" data-flag-title="滚动的公告栏（含"标签"源码）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -781,7 +1347,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,542
+                  1,543
                 </span>
               
 
@@ -811,7 +1377,7 @@
 <h2 id="标签源码"><a href="#标签源码" class="headerlink" title="标签源码"></a>标签源码</h2><p>在<a href="http://www.itsolotime.com/about">小泊的介绍页</a>里，引入了一个”标签图”，大家可以使用手机或者计算机的截屏功能，随机的将当前屏幕截下，最终标签图中显示的内容，就是你给小泊贴的”标签”啦。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/01/18/Scrolling bulletin board/#more" rel="contents">
+            <a class="btn" href="/blog/2018/01/18/Scrolling bulletin board/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -864,12 +1430,12 @@
 
   <div class="post-block">
 
-    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/2018/01/18/course description/">
+    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/blog/blog/2018/01/18/course description/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="漂小泊">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -884,7 +1450,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/18/course description/" itemprop="url">小泊陪你学前端</a></h2>
+                <a class="post-title-link" href="/blog/2018/01/18/course description/" itemprop="url">小泊陪你学前端</a></h2>
         
 
         <div class="post-meta">
@@ -920,7 +1486,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/原创课程/" itemprop="url" rel="index">
+                  <a href="/blog/categories/原创课程/" itemprop="url" rel="index">
                     <span itemprop="name">原创课程</span>
                   </a>
                 </span>
@@ -937,7 +1503,7 @@
 
           
           
-             <span id="/2018/01/18/course description/" class="leancloud_visitors" data-flag-title="小泊陪你学前端">
+             <span id="/blog/2018/01/18/course description/" class="leancloud_visitors" data-flag-title="小泊陪你学前端">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -964,7 +1530,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  541
+                  542
                 </span>
               
 
@@ -994,7 +1560,7 @@
 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>最近博客改版了，改版到今天虽然还没有全部完成，但是大体框架都已经搭建好了，还剩下一些功能的优化和美工，也急不得在一时，布局对于小泊稍有强迫症的人简直是一种煎熬…<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/01/18/course description/#more" rel="contents">
+            <a class="btn" href="/blog/2018/01/18/course description/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1068,7 +1634,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/uploads/avatar.jpg"
+                src="/blog/uploads/avatar.jpg"
                 alt="漂小泊" />
             
               <p class="site-author-name" itemprop="name">漂小泊</p>
@@ -1080,9 +1646,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1092,8 +1658,8 @@
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1103,8 +1669,8 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1264,65 +1830,65 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v="></script>
+  <script type="text/javascript" src="/blog/js/src/utils.js?v="></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v="></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v="></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v="></script>
+  <script type="text/javascript" src="/blog/js/src/motion.js?v="></script>
 
 
 
   
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v="></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v="></script>
+
+
+
+  
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v="></script>
 
 
 
@@ -1372,7 +1938,7 @@
     } else if (/json$/i.test(search_path)) {
       isXml = false;
     }
-    var path = "/" + search_path;
+    var path = "/blog/" + search_path;
     // monitor main search box;
 
     var onPopupClose = function (e) {
@@ -1798,11 +2364,11 @@
   
   
   
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+  <link rel="stylesheet" href="/blog/lib/needsharebutton/needsharebutton.css">
 
   
   
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script src="/blog/lib/needsharebutton/needsharebutton.js"></script>
 
   <script>
     
@@ -1882,11 +2448,11 @@ window.onload = bgChange;
 </script>
 
 <!-- heart -->
-<script type="text/javascript" src="/js/src/love.js"></script>
+<script type="text/javascript" src="http://www.itsolotime.com/js/love.js"></script>
 <!-- Web Pet -->
-
 <div id="hexo-helper-live2d">
-  <canvas id="live2dcanvas" width="150" height="300"></canvas>
+       <div id="canvass" onclick="window.open('http://www.itsolotime.com/');"></div>
+       <canvas id="live2dcanvas" width="300" height="600"></canvas>
 </div>
 <style>
   #live2dcanvas{
@@ -1912,6 +2478,26 @@ const loadScript = function loadScript(c,b){var a=document.createElement("script
   loadScript("/live2d/script.js", function(){loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5);});
 })();
 </script>
-
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script type="text/javascript">
+    function scrs(){
+        var rolllist=document.getElementById("rolllist");
+        rolllist.appendChild(rolllist.firstChild);
+    }
+    setInterval("scrs()",2000);
+</script>
 </body>
 </html>

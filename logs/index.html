@@ -51,7 +51,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -59,21 +59,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=">
+<link href="/blog/css/main.css?v=" rel="stylesheet" type="text/css" />
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=" color="#222">
 
 
 
@@ -90,24 +90,24 @@
 
 
 
-<meta name="description" content="*logs.2018-1-11~1412345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455搭建本地环境：Node.js + Hexo + Github引用Hexo-Next主题,并修改相关功能、样式---添加---添加&amp;quot;网站地图&amp;quot;、">
+<meta name="description" content="*logs.2018-1-15~2012345678维护：漂小泊---主要是对&amp;quot;网站访问速度&amp;quot;进行优化---优化---1、将全站文件搬入&amp;quot;阿里云&amp;quot;云存储，优化国内访问速度。2、将全站图片存储于&amp;quot;七牛云&amp;quot;空间，优化图片加载速度。 *logs.2018-1-11~1412345678910111213141516171819202122232">
 <meta property="og:type" content="website">
 <meta property="og:title" content="开发日志">
-<meta property="og:url" content="http://www.itsolotime.com/logs/index.html">
+<meta property="og:url" content="http://www.itsolotime.com/blog/logs/index.html">
 <meta property="og:site_name" content="小泊随記">
-<meta property="og:description" content="*logs.2018-1-11~1412345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455搭建本地环境：Node.js + Hexo + Github引用Hexo-Next主题,并修改相关功能、样式---添加---添加&amp;quot;网站地图&amp;quot;、">
+<meta property="og:description" content="*logs.2018-1-15~2012345678维护：漂小泊---主要是对&amp;quot;网站访问速度&amp;quot;进行优化---优化---1、将全站文件搬入&amp;quot;阿里云&amp;quot;云存储，优化国内访问速度。2、将全站图片存储于&amp;quot;七牛云&amp;quot;空间，优化图片加载速度。 *logs.2018-1-11~1412345678910111213141516171819202122232">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-15T03:49:22.068Z">
+<meta property="og:updated_time" content="2018-01-22T13:22:40.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开发日志">
-<meta name="twitter:description" content="*logs.2018-1-11~1412345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455搭建本地环境：Node.js + Hexo + Github引用Hexo-Next主题,并修改相关功能、样式---添加---添加&amp;quot;网站地图&amp;quot;、">
+<meta name="twitter:description" content="*logs.2018-1-15~2012345678维护：漂小泊---主要是对&amp;quot;网站访问速度&amp;quot;进行优化---优化---1、将全站文件搬入&amp;quot;阿里云&amp;quot;云存储，优化国内访问速度。2、将全站图片存储于&amp;quot;七牛云&amp;quot;空间，优化图片加载速度。 *logs.2018-1-11~1412345678910111213141516171819202122232">
 
 
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/blog/',
     scheme: 'Pisces',
     version: '',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -130,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="http://www.itsolotime.com/logs/"/>
+  <link rel="canonical" href="http://www.itsolotime.com/blog/logs/"/>
 
 
 
@@ -158,6 +158,9 @@
 
   <!-- QPlayer -->
   <link href="http://mumu.itsolotime.com/css/player.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+
+  </style>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -176,7 +179,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/blog/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">小泊随記</span>
         <span class="logo-line-after"><i></i></span>
@@ -204,7 +207,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/blog/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -214,7 +217,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/blog/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -224,7 +227,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/blog/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -234,7 +237,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/blog/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -244,7 +247,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/blog/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -254,7 +257,7 @@
       
         
         <li class="menu-item menu-item-logs">
-          <a href="/logs/" rel="section">
+          <a href="/blog/logs/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-paste"></i> <br />
             
@@ -310,8 +313,23 @@
     </header>
 
     <main id="main" class="main">
+
       <div class="main-inner">
+
         <div class="content-wrap">
+
+       <!-- scroll bars-->
+       <div id="rollcontent">
+            <ul id="rolllist">
+
+                <li><img  src="images/bulletin.gif" alt="">欢迎您到访小泊随記，很高兴认识你！</li>
+                <li><img  src="images/bulletin.gif" alt="">点击右下角的小姑娘可以返回主页的哦~</li>
+                <li><img  src="images/bulletin.gif" alt="">要放假了，小泊还是很开心哒(づ￣ 3￣)づ</li>
+                <li><img  src="images/bulletin.gif" alt="">文章有错字，记得在文章留言区给小泊留言哦~</li>
+                <li><img  src="images/bulletin.gif" alt="">生活不止眼前的苟且，还有诗和远方。</li>
+            </ul>
+        </div>
+
           <div id="content" class="content">
             
 
@@ -334,7 +352,8 @@
       <div class="post-body">
         
         
-          <h4 id="logs-2018-1-11-14"><a href="#logs-2018-1-11-14" class="headerlink" title="*logs.2018-1-11~14"></a>*logs.2018-1-11~14</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">搭建本地环境：Node.js + Hexo + Github</span><br><span class="line">引用Hexo-Next主题,并修改相关功能、样式</span><br><span class="line">---</span><br><span class="line">添加</span><br><span class="line">---</span><br><span class="line">添加&quot;网站地图&quot;、&quot;公益404&quot;、&quot;站内搜索&quot;菜单项</span><br><span class="line">添加&quot;tags categories archives&quot;菜单项</span><br><span class="line">添加右侧社交栏博主&quot;头像&quot;</span><br><span class="line">添加&quot;动态粒子背景&quot;</span><br><span class="line">添加小巧便捷的&quot;音乐播放器&quot;，实现即时开关、快进、随机播放</span><br><span class="line">添加鼠标点击出现&quot;桃心&quot;效果</span><br><span class="line">添加文末&quot;打赏功能&quot;</span><br><span class="line">添加侧边社交栏&quot;GitHub、QQ、email&quot;选项</span><br><span class="line">添加主页文章添加阴影效果</span><br><span class="line">添加评论插件：来必力</span><br><span class="line">添加文章&quot;加密访问&quot;功能</span><br><span class="line">添加文章底部&quot;分享功能&quot;</span><br><span class="line">添加文章末尾&quot;版权声明、文章链接&quot;标记</span><br><span class="line">添加&quot;文件上传压缩&quot;功能</span><br><span class="line">添加&quot;文章置顶&quot;功能</span><br><span class="line">添加文章&quot;浏览人数、字数统计&quot;</span><br><span class="line">添加站内右下角&quot;萌宠精灵&quot;</span><br><span class="line">添加&quot;友链&quot;功能</span><br><span class="line">添加网站底部&quot;漂小泊&quot;链接，可直接点击与博主QQ对话</span><br><span class="line">添加网站底部&quot;网站备案信息&quot;，可点击Query查询</span><br><span class="line">添加&quot;苹果&quot;手机将本站添加到主屏幕标签图标</span><br><span class="line">----&gt;大家如何经常访问本站，可以在手机浏览器中打开本站，选择标签添加到&quot;手机主界面&quot;</span><br><span class="line">---</span><br><span class="line">优化</span><br><span class="line">---</span><br><span class="line">优化网站浏览速度</span><br><span class="line">优化网站SEO [已被百度等收录，可直接搜索&quot;小泊随記&quot;]</span><br><span class="line">优化移动端的页面、内容展示</span><br><span class="line">优化用户站内搜索</span><br><span class="line">优化Web端布局</span><br><span class="line">优化菜单栏的布局（还未上传覆盖）</span><br><span class="line">优化整体代码结构</span><br><span class="line">优化&quot;动态背景&quot;加载</span><br><span class="line">---</span><br><span class="line">修改</span><br><span class="line">---</span><br><span class="line">修改文章中&quot;代码块&quot;自定义样式</span><br><span class="line">修改文章内链接文本样式</span><br><span class="line">修改文章底部的那个带#号的标签</span><br><span class="line">修改网站的图标Favicon</span><br><span class="line">修改网站底部&quot;漂小泊&quot;字样式</span><br><span class="line">修改菜单栏&quot;透明&quot;样式</span><br><span class="line">修改文章内链接文本样式</span><br><span class="line">---</span><br><span class="line">修复</span><br><span class="line">---</span><br><span class="line">修复菜单列表乱码的问题</span><br><span class="line">修复文章内部分文字乱码问题</span><br><span class="line">修复部分页面无法获取&quot;音乐播放器&quot;样式导致无法播放的问题</span><br><span class="line">修复&quot;萌宠精灵&quot;无法正常显示的问题</span><br></pre></td></tr></table></figure>
+          <h4 id="logs-2018-1-15-20"><a href="#logs-2018-1-15-20" class="headerlink" title="*logs.2018-1-15~20"></a>*logs.2018-1-15~20</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">维护：漂小泊</span><br><span class="line">---</span><br><span class="line">主要是对&quot;网站访问速度&quot;进行优化</span><br><span class="line">---</span><br><span class="line">优化</span><br><span class="line">---</span><br><span class="line">1、将全站文件搬入&quot;阿里云&quot;云存储，优化国内访问速度。</span><br><span class="line">2、将全站图片存储于&quot;七牛云&quot;空间，优化图片加载速度。</span><br></pre></td></tr></table></figure>
+<h4 id="logs-2018-1-11-14"><a href="#logs-2018-1-11-14" class="headerlink" title="*logs.2018-1-11~14"></a>*logs.2018-1-11~14</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">维护：漂小泊</span><br><span class="line">---</span><br><span class="line">搭建本地环境：Node.js + Hexo + Github</span><br><span class="line">引用Hexo-Next主题,并修改相关功能、样式</span><br><span class="line">---</span><br><span class="line">添加</span><br><span class="line">---</span><br><span class="line">添加&quot;网站地图&quot;、&quot;公益404&quot;、&quot;站内搜索&quot;菜单项</span><br><span class="line">添加&quot;tags categories archives&quot;菜单项</span><br><span class="line">添加右侧社交栏博主&quot;头像&quot;</span><br><span class="line">添加&quot;动态粒子背景&quot;</span><br><span class="line">添加小巧便捷的&quot;音乐播放器&quot;，实现即时开关、快进、随机播放</span><br><span class="line">添加鼠标点击出现&quot;桃心&quot;效果</span><br><span class="line">添加文末&quot;打赏功能&quot;</span><br><span class="line">添加侧边社交栏&quot;GitHub、QQ、email&quot;选项</span><br><span class="line">添加主页文章添加阴影效果</span><br><span class="line">添加评论插件：来必力</span><br><span class="line">添加文章&quot;加密访问&quot;功能</span><br><span class="line">添加文章底部&quot;分享功能&quot;</span><br><span class="line">添加文章末尾&quot;版权声明、文章链接&quot;标记</span><br><span class="line">添加&quot;文件上传压缩&quot;功能</span><br><span class="line">添加&quot;文章置顶&quot;功能</span><br><span class="line">添加文章&quot;浏览人数、字数统计&quot;</span><br><span class="line">添加站内右下角&quot;萌宠精灵&quot;</span><br><span class="line">添加&quot;友链&quot;功能</span><br><span class="line">添加网站底部&quot;漂小泊&quot;链接，可直接点击与博主QQ对话</span><br><span class="line">添加网站底部&quot;网站备案信息&quot;，可点击Query查询</span><br><span class="line">添加&quot;苹果&quot;手机将本站添加到主屏幕标签图标</span><br><span class="line">----&gt;大家如何经常访问本站，可以在手机浏览器中打开本站，选择标签添加到&quot;手机主界面&quot;</span><br><span class="line">---</span><br><span class="line">优化</span><br><span class="line">---</span><br><span class="line">优化网站浏览速度</span><br><span class="line">优化网站SEO [已被百度等收录，可直接搜索&quot;小泊随記&quot;]</span><br><span class="line">优化移动端的页面、内容展示</span><br><span class="line">优化用户站内搜索</span><br><span class="line">优化Web端布局</span><br><span class="line">优化菜单栏的布局（还未上传覆盖）</span><br><span class="line">优化整体代码结构</span><br><span class="line">优化&quot;动态背景&quot;加载</span><br><span class="line">---</span><br><span class="line">修改</span><br><span class="line">---</span><br><span class="line">修改文章中&quot;代码块&quot;自定义样式</span><br><span class="line">修改文章内链接文本样式</span><br><span class="line">修改文章底部的那个带#号的标签</span><br><span class="line">修改网站的图标Favicon</span><br><span class="line">修改网站底部&quot;漂小泊&quot;字样式</span><br><span class="line">修改菜单栏&quot;透明&quot;样式</span><br><span class="line">修改文章内链接文本样式</span><br><span class="line">---</span><br><span class="line">修复</span><br><span class="line">---</span><br><span class="line">修复菜单列表乱码的问题</span><br><span class="line">修复文章内部分文字乱码问题</span><br><span class="line">修复部分页面无法获取&quot;音乐播放器&quot;样式导致无法播放的问题</span><br><span class="line">修复&quot;萌宠精灵&quot;无法正常显示的问题</span><br></pre></td></tr></table></figure>
         
       </div>
       
@@ -396,7 +415,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/uploads/avatar.jpg"
+                src="/blog/uploads/avatar.jpg"
                 alt="漂小泊" />
             
               <p class="site-author-name" itemprop="name">漂小泊</p>
@@ -408,9 +427,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -420,8 +439,8 @@
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -431,8 +450,8 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -505,7 +524,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#logs-2018-1-11-14"><span class="nav-number">1.</span> <span class="nav-text">*logs.2018-1-11~14</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#logs-2018-1-15-20"><span class="nav-number">1.</span> <span class="nav-text">*logs.2018-1-15~20</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#logs-2018-1-11-14"><span class="nav-number">2.</span> <span class="nav-text">*logs.2018-1-11~14</span></a></li></ol></div>
             
 
           </div>
@@ -608,69 +627,69 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v="></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v="></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v="></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v="></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
-<script type="text/javascript" src="/js/src/post-details.js?v="></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
+  <script type="text/javascript" src="/blog/js/src/utils.js?v="></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v="></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v="></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v="></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v="></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v="></script>
 
 
 
@@ -731,7 +750,7 @@
     } else if (/json$/i.test(search_path)) {
       isXml = false;
     }
-    var path = "/" + search_path;
+    var path = "/blog/" + search_path;
     // monitor main search box;
 
     var onPopupClose = function (e) {
@@ -1157,11 +1176,11 @@
   
   
   
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+  <link rel="stylesheet" href="/blog/lib/needsharebutton/needsharebutton.css">
 
   
   
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script src="/blog/lib/needsharebutton/needsharebutton.js"></script>
 
   <script>
     
@@ -1241,11 +1260,11 @@ window.onload = bgChange;
 </script>
 
 <!-- heart -->
-<script type="text/javascript" src="/js/src/love.js"></script>
+<script type="text/javascript" src="http://www.itsolotime.com/js/love.js"></script>
 <!-- Web Pet -->
-
 <div id="hexo-helper-live2d">
-  <canvas id="live2dcanvas" width="150" height="300"></canvas>
+       <div id="canvass" onclick="window.open('http://www.itsolotime.com/');"></div>
+       <canvas id="live2dcanvas" width="300" height="600"></canvas>
 </div>
 <style>
   #live2dcanvas{
@@ -1271,6 +1290,26 @@ const loadScript = function loadScript(c,b){var a=document.createElement("script
   loadScript("/live2d/script.js", function(){loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5);});
 })();
 </script>
-
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script type="text/javascript">
+    function scrs(){
+        var rolllist=document.getElementById("rolllist");
+        rolllist.appendChild(rolllist.firstChild);
+    }
+    setInterval("scrs()",2000);
+</script>
 </body>
 </html>

@@ -1992,7 +1992,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #73c4ff;
+  background: #6bb45e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3190,7 +3190,70 @@ pre .javascript .function {
   -webkit-box-shadow: 0 0 5px #000;
   -moz-box-shadow: 0 0 5px #000;
 }
+#canvass {
+  position: fixed;
+  width: 150px;
+  height: 300px;
+  right: 0px;
+  z-index: 9999;
+  bottom: -20px;
+  cursor: pointer;
+  background: transparent;
+}
+#rollcontent {
+  width: 100%;
+  height: 30px;
+  background: transparent;
+  border: 1px solid #c0c0c0;
+  line-height: 20px;
+  -webkit-box-shadow: 0 0 5px #000;
+  -moz-box-shadow: 0 0 5px #000;
+}
+#rolllist {
+  font-size: 16px;
+  overflow: hidden;
+  list-style: none;
+  height: 20px;
+  margin-left: -28px;
+  margin-top: 5px;
+}
+#rolllist li {
+  width: 100%;
+  float: left;
+  height: 22px;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#rolllist li img {
+  float: left;
+  display: block;
+}
 @media screen and (max-width: 768px) {
+  #rollcontent {
+    margin: 10px 10px -10px 15px;
+    width: 91.5%;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #c0c0c0;
+    line-height: 20px;
+    -webkit-box-shadow: 0 0 5px #000;
+    -moz-box-shadow: 0 0 5px #000;
+  }
+  #rolllist {
+    font-size: 12px;
+    overflow: hidden;
+    list-style: none;
+    height: 20px;
+    margin-left: -28px;
+    margin-top: 5px;
+  }
+  #rolllist li {
+    height: 30px;
+    line-height: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
   #posts_top {
     height: 50px;
     width: 50px;
@@ -3216,6 +3279,23 @@ pre .javascript .function {
   .posts-expand {
     margin: 0 15px;
   }
+  .menu {
+    margin-top: 20px;
+    padding-left: 0;
+    text-align: center;
+    background: url("http://mumu.itsolotime.com/img/min-200.png") no-repeat;
+    background-position: center;
+  }
+  #canvass {
+    position: fixed;
+    width: 75px;
+    height: 150px;
+    right: 0px;
+    z-index: 9999;
+    bottom: -20px;
+    cursor: pointer;
+    background: transparent;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   #posts_top {
@@ -3240,6 +3320,9 @@ pre .javascript .function {
     height: 100px;
     width: 100px;
     background: url("http://mumu.itsolotime.com/img/post-top-100.png") no-repeat;
+  }
+  .header-inner {
+    -webkit-box-shadow: 0 0 5px #000;
   }
 }
 code {
@@ -3288,4 +3371,7 @@ body {
 }
 .header-inner {
   background: transparent;
+}
+.sidebar-inner {
+  -webkit-box-shadow: 0 0 5px #000;
 }

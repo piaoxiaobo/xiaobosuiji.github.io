@@ -51,7 +51,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -59,21 +59,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=">
+<link href="/blog/css/main.css?v=" rel="stylesheet" type="text/css" />
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=" color="#222">
 
 
 
@@ -94,7 +94,7 @@
 <meta name="keywords" content="前端开发,小泊陪你学前端,原创">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小泊陪你学前端">
-<meta property="og:url" content="http://www.itsolotime.com/2018/01/18/course description/index.html">
+<meta property="og:url" content="http://www.itsolotime.com/blog/2018/01/18/course description/index.html">
 <meta property="og:site_name" content="小泊随記">
 <meta property="og:description" content="因为心无所恃，所以才随遇而安 ​​。​ 写在前面最近博客改版了，改版到今天虽然还没有全部完成，但是大体框架都已经搭建好了，还剩下一些功能的优化和美工，也急不得在一时，布局对于小泊稍有强迫症的人简直是一种煎熬…">
 <meta property="og:locale" content="zh-Hans">
@@ -108,7 +108,7 @@
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/blog/',
     scheme: 'Pisces',
     version: '',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -131,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://www.itsolotime.com/2018/01/18/course description/"/>
+  <link rel="canonical" href="http://www.itsolotime.com/blog/2018/01/18/course description/"/>
 
 
 
@@ -159,6 +159,9 @@
 
   <!-- QPlayer -->
   <link href="http://mumu.itsolotime.com/css/player.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+
+  </style>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -177,7 +180,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/blog/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">小泊随記</span>
         <span class="logo-line-after"><i></i></span>
@@ -205,7 +208,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/blog/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -215,7 +218,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/blog/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -225,7 +228,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/blog/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -235,7 +238,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/blog/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -245,7 +248,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/blog/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -255,7 +258,7 @@
       
         
         <li class="menu-item menu-item-logs">
-          <a href="/logs/" rel="section">
+          <a href="/blog/logs/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-paste"></i> <br />
             
@@ -311,8 +314,23 @@
     </header>
 
     <main id="main" class="main">
+
       <div class="main-inner">
+
         <div class="content-wrap">
+
+       <!-- scroll bars-->
+       <div id="rollcontent">
+            <ul id="rolllist">
+
+                <li><img  src="images/bulletin.gif" alt="">欢迎您到访小泊随記，很高兴认识你！</li>
+                <li><img  src="images/bulletin.gif" alt="">点击右下角的小姑娘可以返回主页的哦~</li>
+                <li><img  src="images/bulletin.gif" alt="">要放假了，小泊还是很开心哒(づ￣ 3￣)づ</li>
+                <li><img  src="images/bulletin.gif" alt="">文章有错字，记得在文章留言区给小泊留言哦~</li>
+                <li><img  src="images/bulletin.gif" alt="">生活不止眼前的苟且，还有诗和远方。</li>
+            </ul>
+        </div>
+
           <div id="content" class="content">
             
 
@@ -333,12 +351,12 @@
 
   <div class="post-block">
 
-    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/2018/01/18/course description/">
+    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/blog/blog/2018/01/18/course description/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="漂小泊">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -387,7 +405,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/原创课程/" itemprop="url" rel="index">
+                  <a href="/blog/categories/原创课程/" itemprop="url" rel="index">
                     <span itemprop="name">原创课程</span>
                   </a>
                 </span>
@@ -404,7 +422,7 @@
 
           
           
-             <span id="/2018/01/18/course description/" class="leancloud_visitors" data-flag-title="小泊陪你学前端">
+             <span id="/blog/2018/01/18/course description/" class="leancloud_visitors" data-flag-title="小泊陪你学前端">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -431,7 +449,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  541
+                  542
                 </span>
               
 
@@ -465,7 +483,7 @@
 <p>课程地址：<br>1、博客：<a href="http://www.itsolotime.com">小泊随記</a><br>2、Github：<a href="https://github.com/piaoxiaobo" target="_blank" rel="noopener">piaoxiaobo</a><br><strong>如果大家可以接受或者喜欢小泊的课程，麻烦朋友们在GitHub上给个star~</strong></p>
 <h2 id="联系小泊"><a href="#联系小泊" class="headerlink" title="联系小泊"></a>联系小泊</h2><p>email：643209899@qq.com</p>
 <h2 id="特别提醒"><a href="#特别提醒" class="headerlink" title="特别提醒"></a>特别提醒</h2><p>小泊也不可能做到百分百不出错，但是会尽力在发布之前反复论证，如果有错误，也希望大家多多见谅/调皮</p>
-<p><strong>本文作者</strong>：漂小泊<br><strong>本文地址</strong>： <a href="http://www.itsolotime.com/2018/01/18/course description/">http://www.itsolotime.com/2018/01/18/course description/</a> <br><strong>版权声明</strong>：转载请注明出处！</p>
+<p><strong>本文作者</strong>：漂小泊<br><strong>本文地址</strong>： <a href="http://www.itsolotime.com/blog/2018/01/18/course description/">http://www.itsolotime.com/blog/2018/01/18/course description/</a> <br><strong>版权声明</strong>：转载请注明出处！</p>
 
       
     </div>
@@ -486,14 +504,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wrchatpay.png" alt="漂小泊 微信支付"/>
+        <img id="wechat_qr" src="http://www.itsolotime.com/blog/images/wrchatpay.png" alt="漂小泊 微信支付"/>
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="漂小泊 支付宝"/>
+        <img id="alipay_qr" src="http://www.itsolotime.com/blog/images/alipay.jpg" alt="漂小泊 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -512,11 +530,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端开发/" rel="tag"><i class="fa fa-tag"></i> 前端开发</a>
+            <a href="/blog/tags/前端开发/" rel="tag"><i class="fa fa-tag"></i> 前端开发</a>
           
-            <a href="/tags/小泊陪你学前端/" rel="tag"><i class="fa fa-tag"></i> 小泊陪你学前端</a>
+            <a href="/blog/tags/小泊陪你学前端/" rel="tag"><i class="fa fa-tag"></i> 小泊陪你学前端</a>
           
-            <a href="/tags/原创/" rel="tag"><i class="fa fa-tag"></i> 原创</a>
+            <a href="/blog/tags/原创/" rel="tag"><i class="fa fa-tag"></i> 原创</a>
           
         </div>
       
@@ -545,7 +563,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/11/Revised instructions/" rel="next" title="博客全新改版">
+              <a href="/blog/2018/01/11/Revised instructions/" rel="next" title="博客全新改版">
                 <i class="fa fa-chevron-left"></i> 博客全新改版
               </a>
             
@@ -555,7 +573,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/18/Scrolling bulletin board/" rel="prev" title="滚动的公告栏（含"标签"源码）">
+              <a href="/blog/2018/01/18/Scrolling bulletin board/" rel="prev" title="滚动的公告栏（含"标签"源码）">
                 滚动的公告栏（含"标签"源码） <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -629,7 +647,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/uploads/avatar.jpg"
+                src="/blog/uploads/avatar.jpg"
                 alt="漂小泊" />
             
               <p class="site-author-name" itemprop="name">漂小泊</p>
@@ -641,9 +659,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -653,8 +671,8 @@
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -664,8 +682,8 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -841,69 +859,69 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v="></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v="></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v="></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v="></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
-<script type="text/javascript" src="/js/src/post-details.js?v="></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
+  <script type="text/javascript" src="/blog/js/src/utils.js?v="></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v="></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v="></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v="></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v="></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v="></script>
 
 
 
@@ -964,7 +982,7 @@
     } else if (/json$/i.test(search_path)) {
       isXml = false;
     }
-    var path = "/" + search_path;
+    var path = "/blog/" + search_path;
     // monitor main search box;
 
     var onPopupClose = function (e) {
@@ -1390,11 +1408,11 @@
   
   
   
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+  <link rel="stylesheet" href="/blog/lib/needsharebutton/needsharebutton.css">
 
   
   
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script src="/blog/lib/needsharebutton/needsharebutton.js"></script>
 
   <script>
     
@@ -1474,11 +1492,11 @@ window.onload = bgChange;
 </script>
 
 <!-- heart -->
-<script type="text/javascript" src="/js/src/love.js"></script>
+<script type="text/javascript" src="http://www.itsolotime.com/js/love.js"></script>
 <!-- Web Pet -->
-
 <div id="hexo-helper-live2d">
-  <canvas id="live2dcanvas" width="150" height="300"></canvas>
+       <div id="canvass" onclick="window.open('http://www.itsolotime.com/');"></div>
+       <canvas id="live2dcanvas" width="300" height="600"></canvas>
 </div>
 <style>
   #live2dcanvas{
@@ -1504,6 +1522,26 @@ const loadScript = function loadScript(c,b){var a=document.createElement("script
   loadScript("/live2d/script.js", function(){loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5);});
 })();
 </script>
-
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script type="text/javascript">
+    function scrs(){
+        var rolllist=document.getElementById("rolllist");
+        rolllist.appendChild(rolllist.firstChild);
+    }
+    setInterval("scrs()",2000);
+</script>
 </body>
 </html>

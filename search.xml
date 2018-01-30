@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[利用MongoDB、Mongoose和Express模拟实现用户的登陆、注册]]></title>
+    <url>%2Fblog%2F2018%2F01%2F25%2Flogin%20and%20regist%2F</url>
+    <content type="text"><![CDATA[工欲善其事必先利其器。 功能简述在本机利用MongoDB、Mongoose模拟搭建本地数据库，利用Express模拟搭建本地服务器，通过浏览器访问本地注册和登陆界面，实现用户的注册和登陆，并对用户数据进行简单的加密处理。 引读：数据库（Database）数据库是按照数据结构来组织、存储和管理数据的仓库。我们的程序都是在内存中运行的，一旦程序运行结束或者计算机断电，程序运行中的数据都会丢失。所以我们就需要将一些程序运行的数据持久化到硬盘之中，以确保数据的安全性。而数据库就是数据持久化的最佳选择。说白了，数据库就是存储数据的仓库。 数据库主要分成两种：关系型数据库MySQL、Oracle、DB2、SQL Server ……关系数据库中全都是表非关系型数据库MongoDB、Redis ……键值对数据库文档数据库MongoDB延伸：百度百科 MongoDB简介MongoDB是为快速开发互联网Web应用而设计的数据库系统。设计目标是极简、灵活、作为Web应用栈的一部分。MongoDB的数据模型是面向文档的，所谓文档是一种类似于JSON的结构，简单理解MongoDB这个数据库中存的是各种各样的JSON。（BSON）延伸百度百科 官网：https://www.mongodb.com/ ####下载安装 1、下载地址https://www.mongodb.org/dl/win32/MongoDB的版本偶数版本为稳定版，奇数版本为开发版。MongoDB对于32位系统支持不佳，所以3.2版本以后没有再对32位系统的支持。 2、安装 ①点击下一步，同意条约 ②选择默认完全安装还是自主安装这里建议选择默认安装，如果自主安装在选择安装目录时确保安装路径无中文字符 ③安装完成 3、配置mongDB并启动 ①找到MongoDB安装路径，将其加入“环境变量”中1C:\Program Files\MongoDB\Server\3.2\bin 修改安装目录的将修改的安装目录地址加入环境变量的详细配置→http://www.itsolotime.com/blog/2018/01/25/node.js%20usage ②在c盘根目录下创建文件夹：datadata/db ③打开命令行窗口，输入mongod启动数据库服务器1mongod 注意：32位系统的用户，第一次启动时输入如下指令来启动服务器1mongod --storageEngine=mmapv1 ④出现如下内容，证明数据库服务器启动成功1waiting for connections on port 27017 4、启动MongoDB客户端注意：上一步的命令窗口不要关闭打开一个新的命令行窗口，输入mongo，来启动客户端1mongo 出现 connecting to: test 证明连接成功 其他配置1、如何自主修改MongoDB的存储位置和默认端口（不建议修改）1mongod --dbpath C:\Users\Zero\Desktop\mongo\data\db --port 12321 以上代码就是将存储位置指定到了“桌面的mongo文件夹中的data/db中”,端口将27017指定为了12321 2、配置windows系统启动项配置启动项将使每次开机后，数据库自动启动，不再人工的去启动数据库然后再去连接数据库客户端①在上文创建的data文件加下创建一个log文件夹 ②在mongo安装目录的server下3.x目录下创建mongod.cfg文件 安装在C盘目录下系统可能会出于自身保护，不允许在该目录下创建“mongod.cfg”文件，可在桌面创建好后移入即可。且创建文件时先创建一个文本文件，在文本中加入以下内容：12345systemLog: destination: file path: c:\data\log\mongod.log //如果更改目录位置请按照你更改的地址填入storage: dbPath: c:\data\db //如果更改目录位置请按照你更改的地址填入 文本创建完成后，将文本名称修改为mongod.cfg 注意：一定要将文件类型一并改过来，系统默认隐藏文件类型，需先将文件类型打开。这个是错误的：这个是正确的： ③管理员模式打开cmd窗口，并输入如下指令1sc.exe create MongoDB binPath= &quot;\&quot;mongo bin路径\mongod.exe\&quot; --service --config=\&quot;mongo路径\mongod.cfg\&quot;&quot; DisplayName= &quot;MongoDB&quot; start= &quot;auto&quot; 默认安装直接复制下面的代码1sc.exe create MongoDB binPath= &quot;\&quot;C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe\&quot; --service --config=\&quot;C:\Program Files\MongoDB\Server\3.2\mongod.cfg\&quot;&quot; DisplayName= &quot;MongoDB&quot; start= &quot;auto&quot; ④打开任务管理器，进入服务的窗口，找到MongoDB服务项并启动 ⑤如果服务启动失败，输入如下指令 sc delete MongoDB 并关闭服务窗口 ⑥重复上述操作 ⑦如果启动成功即可打开cmd窗口验证，直接连接客户端 Express简介Express 是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。简单来说就是运行在Node 平台中的服务器模块，通过Express可以很容易的通过HTTP协议向用户返回静态或动态页面。 Express的特点:精简、灵活、适合各种WEB应用程序 官方网站：http://www.expressjs.com.cn/API手册：http://www.expressjs.com.cn/4x/api.html 安装1、安装并添加到项目依赖1npm i express --save 2、安装不添加依赖1npm i express 使用使用步骤：1.引入Express1var express = require(&quot;express&quot;); 2.创建app(application)对象1var app = express(); 3.配置静态资源的路径1app.use(express.static(&quot;public&quot;)); 4.监听端口并启动服务器1app.listen(3000); js文件代码如下：12345678910111213141516171819//引入Expressvar express = require(&quot;express&quot;);//创建app对象//app 代表整个web服务器，一个服务器就是一个app对象，一个服务器中只有一个appvar app = express();//配置静态资源的路径app.use(express.static(&quot;public&quot;));//监听3000端口，并启动服务器/* HTTP协议 默认端口号是 80 HTTPS协议 默认端口号是 443 */app.listen(3000,function () &#123; console.log(&quot;服务器已经启动&quot;);&#125;); 路由（route）路由是将请求（由 URL 和 HTTP 方法指定）路由到处理它们的代码去的一种机制通过路由可以将浏览器发送的请求和Node中的函数进行关联，通过函数可以来获取用户发送的请求，或向用户返回响应。路由是Express的根本，通过路由才可以在用户和服务器之间建立联系。 实现路由可以将路由定义为两个部分：第一部分：HTTP请求的方法（get或post）第二部分：是URL中指定的路径Express中提供了一些列函数，可以让我们很方便的实现路由：app.(path，callback)语法method指的是HTTP请求方法，比如：app.get()app.post()path指要通过回调函数来处理的URL地址callback参数是应该处理该请求并把响应发回客户端的请求处理程序 路由的运行路程当Express服务器接收到一个HTTP请求时，它会查找已经为适当的HTTP方法和路径定义的路由如果找到一个，Request和Response对象会被创建，并被传递给路由的回调函数我们便可以通过Request对象读取请求，通过Response对象返回响应Express中还提供了all()方法，可以处理两种请求。 Reauest对象Request对象是路由回调函数中的第一个参数，代表了用户发送给服务器的请求信息通过Request对象可以读取用户发送的请求包括URL地址中的查询字符串中的参数，和post请求的请求体中的参数。 联系小泊email：643209899@qq.com 本文作者：漂小泊本文地址： http://www.itsolotime.com/blog/2018/01/25/login and regist/ 版权声明：转载请注明出处！]]></content>
+      <categories>
+        <category>小功能</category>
+      </categories>
+      <tags>
+        <tag>原创</tag>
+        <tag>MongoDB</tag>
+        <tag>Mongoose</tag>
+        <tag>Express</tag>
+        <tag>npm</tag>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Node.js介绍和安装]]></title>
     <url>%2Fblog%2F2018%2F01%2F25%2Fnode.js%20usage%2F</url>
     <content type="text"><![CDATA[生活不只是眼前的苟且，还有诗和远方。 Node.js简介介绍Node.js是一个能够在服务器端运行JavaScript的开放源代码、跨平台JavaScript运行环境。采用Google开发的V8引擎运行js代码，使用事件驱动、非阻塞和异步I/O模型等技术来提高性能，可优化应用程序的传输量和规模。大部分基本模块都用JavaScript编写。在Node出现之前，JS通常作为客户端程序设计语言使用，以JS写出的程序常在用户的浏览器上运行。 目前，Node.js已被IBM、Microsoft、Yahoo!、Walmart、Groupon、SAP、 LinkedIn、Rakuten、PayPal、Voxer和GoDaddy等企业采用。Node主要用于编写像Web服务器一样的网络应用，这和PHP和Python是类似的。但是Node与其他语言最大的不同之处在于，PHP等语言是阻塞的而Node是非阻塞的。Node是事件驱动的，开发者可以在不使用线程的情况下开发出一个能够承载高并发的服务器。其他服务器端语言难以开发高并发应用，而且即使开发出来，性能也不尽人意。 创始人瑞安·达尔（Ryan Dahl）Ryan Dahl并非科班出身的开发者，在2004年的时候他还在纽约的罗彻斯特大学数学系读博士。 2006年，也许是厌倦了读博的无聊，他产生了『世界那么大，我想去看看』的念头，做出了退学的决定，然后一个人来到智利的Valparaiso小镇。 从那起，Ryan Dahl不知道是否因为生活的关系，他开始学习网站开发了，走上了“码农”的道路。 那时候Ruby on Rails很火，他也不例外的学习了它。 从那时候开始，Ryan Dahl的生活方式就是接项目，然后去客户的地方工作，在他眼中，拿工资和上班其实就是去那里旅行。 Ryan Dahl经过两年的工作后，成为了高性能Web服务器的专家，从接开发应用到变成专门帮客户解决性能问题的专家。 期间他开始写一些开源项目帮助客户解决Web服务器的高并发性能问题，他尝试了很多种语言，但是最终都失败了。在他快绝望的时候，V8引擎来了。V8满足他关于高性能Web服务器的想象。于是在2009年2月它开始着手编写Node.js Node.js历史 荐读：Node.js与io.js那些事儿 Node.js用途 Web服务API，比如REST 实时多人游戏 后端的Web服务，例如跨域、服务器端的请求 基于Web的应用 多客户端的通信，如即时通信 Node.js官网英文官网（访问需“翻墙”）：https://nodejs.org中文官网：http://nodejs.cn/ Node.JS的安装下载 官方下载地址：http://nodejs.cn/download/需要注意的是：版本号为偶数开头，即为稳定版本。版本号为奇数开头，即为开发版本。一般情况下，我们使用“稳定版” 安装1、双击安装包，点击下一步。 2、同意安装协议，选择安装目录。（安装目录可以更改，这里建议安装目录尽量不要有中文） 3、选择功能插件，建议默认全部安装，点击下一步。4、安装完成。 5、查看是否安装成功：-win7&amp;win10用户：打开“cmd”窗口，输入:1node -v 若有版本号输出，即为安装正确。 -“cmd”命令窗口打开的方法：快捷键：windows键（键盘空格左边第二个键）+ R 打开“运行”窗口，输入“cmd”确定即可打开。 目录打开：win7用户：点击“开始菜单”，查找“windows附件” - cmd命令窗口win10用户：点击“开始菜单”，查找“windows系统” - cmd命令窗口6、node.js目录结构 环境变量配置一般情况下，在安装node.js时，软件会自动的对“环境变量”进行配置。如果软件并未自动配置“环境变量”，在命令窗口中输入命令无法正常获取版本号，这时候，就需要我们手动来配置一下。 1、找到node.js安装目录1E:\nodejs 2、右键“我的电脑”，打开“属性”面板/win10用户打开“此电脑（改名的打开自己的名字）”3、打开高级系统设置中的环境变量 -也可以打开“控制面板” - “系统和安全” - “系统” - “高级系统设置 - “环境变量” 4、找到系统变量里的“path”，然后“编辑”-“添加”。-win10用户是列表，直接“双击列表空白行”，将node.js安装目录输入进去，点击确定即可。 -win7用户是“单行”，直接在内容的末尾添加“E:\nodejs;” 注意：一定要添加末尾的 ; 且为英文的 ;-如果你的“环境变量”中没有”Path”这个变量，直接自己新建一个即可。-如果“path”变量中已经设置很多值，一定注意不要“误删减”。1%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;F:\AppServ\Apache24\bin;F:\AppServ\php5;F:\AppServ\MySQL\bin;C:\Users\Zero\AppData\Roaming\npm;C:\Program Files\MongoDB\Server\3.2\bin;E:\nodejs 5、在cmd中再次输入正常即可。 联系小泊email：643209899@qq.com 本文作者：漂小泊本文地址： http://www.itsolotime.com/blog/2018/01/25/node.js usage/ 版权声明：转载请注明出处！]]></content>
@@ -8,6 +24,7 @@
         <category>工具箱</category>
       </categories>
       <tags>
+        <tag>原创</tag>
         <tag>Node.js</tag>
         <tag>系统环境变量配置</tag>
       </tags>
@@ -20,6 +37,7 @@
         <category>运维</category>
       </categories>
       <tags>
+        <tag>原创</tag>
         <tag>linux</tag>
         <tag>软路由</tag>
         <tag>服务器维护</tag>
@@ -37,6 +55,7 @@
         <tag>Webstorm</tag>
         <tag>前端开发</tag>
         <tag>工具</tag>
+        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
@@ -73,8 +92,8 @@
       </categories>
       <tags>
         <tag>前端开发</tag>
-        <tag>小泊陪你学前端</tag>
         <tag>原创</tag>
+        <tag>小泊陪你学前端</tag>
       </tags>
   </entry>
   <entry>

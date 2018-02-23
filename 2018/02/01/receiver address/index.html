@@ -79,7 +79,7 @@
 
 
 
-  <meta name="keywords" content="原创,MongoDB,Mongoose,Express,npm,Node.js," />
+  <meta name="keywords" content="原创,ajax," />
 
 
 
@@ -90,18 +90,21 @@
 
 
 
-<meta name="description" content="工欲善其事必先利其器。 功能简述在本机利用MongoDB、Mongoose模拟搭建本地数据库，利用Express模拟搭建本地服务器，通过浏览器访问本地注册和登陆界面，实现用户的注册和登陆，并对用户数据进行简单的加密处理。">
-<meta name="keywords" content="原创,MongoDB,Mongoose,Express,npm,Node.js">
+<meta name="description" content="我一直都在，而你却悄然离去。 情景说明在我们日常购物（像淘宝，京东，美团等）或者注册某些网站的会员时，需要我们来填写地址，像省、市、县可以直接在下拉列表中选择，那么像这种“地址三级联动”怎么实现的呢？今天我们就通过ajax的技术，来模拟做一个地址的三级联动的功能。">
+<meta name="keywords" content="原创,ajax">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用MongoDB、Mongoose和Express模拟实现用户的登陆、注册">
-<meta property="og:url" content="http://www.itsolotime.com/blog/2018/01/25/login and regist/index.html">
+<meta property="og:title" content="利用ajax实现收货地址三级联动">
+<meta property="og:url" content="https://www.itsolotime.com/blog/2018/02/01/receiver address/index.html">
 <meta property="og:site_name" content="小泊随記">
-<meta property="og:description" content="工欲善其事必先利其器。 功能简述在本机利用MongoDB、Mongoose模拟搭建本地数据库，利用Express模拟搭建本地服务器，通过浏览器访问本地注册和登陆界面，实现用户的注册和登陆，并对用户数据进行简单的加密处理。">
+<meta property="og:description" content="我一直都在，而你却悄然离去。 情景说明在我们日常购物（像淘宝，京东，美团等）或者注册某些网站的会员时，需要我们来填写地址，像省、市、县可以直接在下拉列表中选择，那么像这种“地址三级联动”怎么实现的呢？今天我们就通过ajax的技术，来模拟做一个地址的三级联动的功能。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-26T12:29:08.891Z">
+<meta property="og:image" content="https://www.itsolotime.com/images/address/address-1.png">
+<meta property="og:image" content="https://www.itsolotime.com/images/address/address-2.png">
+<meta property="og:updated_time" content="2018-02-01T07:36:32.963Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用MongoDB、Mongoose和Express模拟实现用户的登陆、注册">
-<meta name="twitter:description" content="工欲善其事必先利其器。 功能简述在本机利用MongoDB、Mongoose模拟搭建本地数据库，利用Express模拟搭建本地服务器，通过浏览器访问本地注册和登陆界面，实现用户的注册和登陆，并对用户数据进行简单的加密处理。">
+<meta name="twitter:title" content="利用ajax实现收货地址三级联动">
+<meta name="twitter:description" content="我一直都在，而你却悄然离去。 情景说明在我们日常购物（像淘宝，京东，美团等）或者注册某些网站的会员时，需要我们来填写地址，像省、市、县可以直接在下拉列表中选择，那么像这种“地址三级联动”怎么实现的呢？今天我们就通过ajax的技术，来模拟做一个地址的三级联动的功能。">
+<meta name="twitter:image" content="https://www.itsolotime.com/images/address/address-1.png">
 
 
 
@@ -131,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://www.itsolotime.com/blog/2018/01/25/login and regist/"/>
+  <link rel="canonical" href="https://www.itsolotime.com/blog/2018/02/01/receiver address/"/>
 
 
 
 
 
-  <title>利用MongoDB、Mongoose和Express模拟实现用户的登陆、注册 | 小泊随記</title>
+  <title>利用ajax实现收货地址三级联动 | 小泊随記</title>
   
 
 
@@ -325,9 +328,9 @@
 
                 <li><img  src="https://www.itsolotime.com/mumu/img/bulletin.gif" alt="">欢迎您到访小泊随記，很高兴认识你！</li>
                 <li><img  src="https://www.itsolotime.com/mumu/img/bulletin.gif" alt="">点击右下角的小姑娘可以返回主页的哦~</li>
-                <li><img  src="https://www.itsolotime.com/mumu/img/bulletin.gif" alt="">要放假了，小泊还是很开心哒(づ￣ 3￣)づ</li>
-                <li><img  src="https://www.itsolotime.com/mumu/img/bulletin.gif" alt="">文章有错字，记得在文章留言区给小泊留言哦~</li>
-                <li><img  src="https://www.itsolotime.com/mumu/img/bulletin.gif" alt="">生活不止眼前的苟且，还有诗和远方。</li>
+                <li><img  src="https://www.itsolotime.com/mumu/img/bulletin.gif" alt="">愿事如己愿，见者生喜。</li>
+                <li><img  src="https://www.itsolotime.com/mumu/img/bulletin.gif" alt="">文章留言区功能正在升级中，暂时关闭请谅解~</li>
+                <li><img  src="https://www.itsolotime.com/mumu/img/bulletin.gif" alt="">失望是一点点积累的，离开是个很长的决定。。</li>
             </ul>
         </div>
 
@@ -351,7 +354,7 @@
 
   <div class="post-block">
 
-    <link itemprop="mainEntityOfPage" href="http://www.itsolotime.com/blog/blog/2018/01/25/login and regist/">
+    <link itemprop="mainEntityOfPage" href="https://www.itsolotime.com/blog/blog/2018/02/01/receiver address/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="漂小泊">
@@ -369,7 +372,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">利用MongoDB、Mongoose和Express模拟实现用户的登陆、注册</h2>
+          <h2 class="post-title" itemprop="name headline">利用ajax实现收货地址三级联动</h2>
         
 
         <div class="post-meta">
@@ -382,8 +385,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T15:19:46+08:00">
-                2018-01-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T11:11:43+08:00">
+                2018-02-01
               </time>
             
 
@@ -422,7 +425,7 @@
 
           
           
-             <span id="/blog/2018/01/25/login and regist/" class="leancloud_visitors" data-flag-title="利用MongoDB、Mongoose和Express模拟实现用户的登陆、注册">
+             <span id="/blog/2018/02/01/receiver address/" class="leancloud_visitors" data-flag-title="利用ajax实现收货地址三级联动">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -449,7 +452,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,038
+                  1,438
                 </span>
               
 
@@ -474,55 +477,44 @@
       
 
       
-        <p>工欲善其事必先利其器。</p>
-<h3 id="功能简述"><a href="#功能简述" class="headerlink" title="功能简述"></a>功能简述</h3><p>在本机利用MongoDB、Mongoose模拟搭建本地数据库，利用Express模拟搭建本地服务器，通过浏览器访问本地注册和登陆界面，实现用户的注册和登陆，并对用户数据进行简单的加密处理。<br><a id="more"></a></p>
-<h3 id="引读：数据库（Database）"><a href="#引读：数据库（Database）" class="headerlink" title="引读：数据库（Database）"></a>引读：数据库（Database）</h3><p>数据库是按照数据结构来组织、存储和管理数据的仓库。<br>我们的程序都是在内存中运行的，一旦程序运行结束或者计算机断电，程序运行中的数据都会丢失。<br>所以我们就需要将一些程序运行的数据持久化到硬盘之中，以确保数据的安全性。而数据库就是数据持久化的最佳选择。<br>说白了，数据库就是存储数据的仓库。</p>
-<p>数据库主要分成两种：<br><strong>关系型数据库</strong><br>MySQL、Oracle、DB2、SQL Server ……<br>关系数据库中全都是表<br><strong>非关系型数据库</strong><br>MongoDB、Redis ……<br>键值对数据库<br>文档数据库MongoDB<br><em>延伸：<a href="https://baike.baidu.com/item/数据库/103728?fr=aladdin" target="_blank" rel="noopener">百度百科</a></em></p>
-<h3 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>MongoDB是为快速开发互联网Web应用而设计的数据库系统。设计目标是极简、灵活、作为Web应用栈的一部分。<br>MongoDB的数据模型是面向文档的，所谓文档是一种类似于JSON的结构，简单理解MongoDB这个数据库中存的是各种各样的JSON。（BSON）<br><em>延伸<a href="https://baike.baidu.com/item/mongodb/60411?fr=aladdin" target="_blank" rel="noopener">百度百科</a></em></p>
-<p>官网：<a href="https://www.mongodb.com/" target="_blank" rel="noopener">https://www.mongodb.com/</a></p>
-<p>####下载安装</p>
-<p>1、下载地址<br><a href="https://www.mongodb.org/dl/win32/" target="_blank" rel="noopener">https://www.mongodb.org/dl/win32/</a><br><em>MongoDB的版本偶数版本为稳定版，奇数版本为开发版。<br>MongoDB对于32位系统支持不佳，所以3.2版本以后没有再对32位系统的支持。</em></p>
-<p>2、安装</p>
-<p>①点击下一步，同意条约</p>
-<p>②选择默认完全安装还是自主安装<br><em>这里建议选择默认安装，如果自主安装在选择安装目录时确保安装路径无中文字符</em></p>
-<p>③安装完成</p>
-<p>3、配置mongDB并启动</p>
-<p>①找到MongoDB安装路径，将其加入“环境变量”中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\MongoDB\Server\3.2\bin</span><br></pre></td></tr></table></figure></p>
-<p><em>修改安装目录的将修改的安装目录地址加入</em><br><em>环境变量的详细配置→<a href="http://www.itsolotime.com/blog/2018/01/25/node.js%20usage">http://www.itsolotime.com/blog/2018/01/25/node.js%20usage</a></em></p>
-<p>②在c盘根目录下创建文件夹：<br>data<br>data/db</p>
-<p>③打开命令行窗口，输入mongod启动数据库服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod</span><br></pre></td></tr></table></figure></p>
-<p><em>注意：32位系统的用户，第一次启动时输入如下指令来启动服务器</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --storageEngine=mmapv1</span><br></pre></td></tr></table></figure></p>
-<p>④出现如下内容，证明数据库服务器启动成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">waiting for connections on port 27017</span><br></pre></td></tr></table></figure></p>
-<p>4、启动MongoDB客户端<br><em>注意：上一步的命令窗口不要关闭</em><br>打开一个新的命令行窗口，输入mongo，来启动客户端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure></p>
-<p>出现 connecting to: test 证明连接成功</p>
-<h4 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h4><p>1、如何自主修改MongoDB的存储位置和默认端口<em>（不建议修改）</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --dbpath C:\Users\Zero\Desktop\mongo\data\db --port 12321</span><br></pre></td></tr></table></figure></p>
-<p>以上代码就是将存储位置指定到了“桌面的mongo文件夹中的data/db中”,端口将27017指定为了12321</p>
-<p>2、配置windows系统启动项<br>配置启动项将使每次开机后，数据库自动启动，不再人工的去启动数据库然后再去连接数据库客户端<br>①在上文创建的data文件加下创建一个log文件夹</p>
-<p>②在mongo安装目录的server下3.x目录下创建mongod.cfg文件</p>
-<p><font color="red"><em>安装在C盘目录下系统可能会出于自身保护，不允许在该目录下创建“mongod.cfg”文件，可在桌面创建好后移入即可。且创建文件时先创建一个文本文件，在文本中加入以下内容：</em></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemLog:</span><br><span class="line">    destination: file</span><br><span class="line">    path: c:\data\log\mongod.log  //如果更改目录位置请按照你更改的地址填入</span><br><span class="line">storage:</span><br><span class="line">    dbPath: c:\data\db   //如果更改目录位置请按照你更改的地址填入</span><br></pre></td></tr></table></figure></p>
-<p>文本创建完成后，将文本名称修改为mongod.cfg  <em>注意：一定要将文件类型一并改过来，系统默认隐藏文件类型，需先将文件类型打开。</em><br>这个是错误的：<br>这个是正确的：</p>
-<p>③管理员模式打开cmd窗口，并输入如下指令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc.exe create MongoDB binPath= &quot;\&quot;mongo bin路径\mongod.exe\&quot; --service --config=\&quot;mongo路径\mongod.cfg\&quot;&quot; DisplayName= &quot;MongoDB&quot; start= &quot;auto&quot;</span><br></pre></td></tr></table></figure></p>
-<p>默认安装直接复制下面的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc.exe create MongoDB binPath= &quot;\&quot;C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe\&quot; --service --config=\&quot;C:\Program Files\MongoDB\Server\3.2\mongod.cfg\&quot;&quot; DisplayName= &quot;MongoDB&quot; start= &quot;auto&quot;</span><br></pre></td></tr></table></figure></p>
-<p>④打开任务管理器，进入服务的窗口，找到MongoDB服务项并启动</p>
-<p>⑤如果服务启动失败，输入如下指令 sc delete MongoDB 并关闭服务窗口</p>
-<p>⑥重复上述操作</p>
-<p>⑦如果启动成功即可打开cmd窗口验证，直接连接客户端</p>
-<h3 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h3><h4 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h4><p><strong>Express</strong> 是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。简单来说就是运行在Node 平台中的服务器模块，通过Express可以很容易的通过HTTP协议向用户返回静态或动态页面。</p>
-<p><strong>Express的特点:</strong><br>精简、灵活、适合各种WEB应用程序</p>
-<p>官方网站：<a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">http://www.expressjs.com.cn/</a><br>API手册：<a href="http://www.expressjs.com.cn/4x/api.html" target="_blank" rel="noopener">http://www.expressjs.com.cn/4x/api.html</a></p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>1、安装并添加到项目依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express --save</span><br></pre></td></tr></table></figure></p>
-<p>2、安装不添加依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express</span><br></pre></td></tr></table></figure></p>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>使用步骤：<br>1.引入Express<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var express = require(&quot;express&quot;);</span><br></pre></td></tr></table></figure></p>
-<p>2.创建app(application)对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var app = express();</span><br></pre></td></tr></table></figure></p>
-<p>3.配置静态资源的路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(express.static(&quot;public&quot;));</span><br></pre></td></tr></table></figure></p>
-<p>4.监听端口并启动服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.listen(3000);</span><br></pre></td></tr></table></figure></p>
-<p>js文件代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//引入Express</span><br><span class="line">var express = require(&quot;express&quot;);</span><br><span class="line"></span><br><span class="line">//创建app对象</span><br><span class="line">//app 代表整个web服务器，一个服务器就是一个app对象，一个服务器中只有一个app</span><br><span class="line">var app = express();</span><br><span class="line"></span><br><span class="line">//配置静态资源的路径</span><br><span class="line">app.use(express.static(&quot;public&quot;));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//监听3000端口，并启动服务器</span><br><span class="line">/*</span><br><span class="line">	HTTP协议 默认端口号是 80</span><br><span class="line">	HTTPS协议 默认端口号是 443</span><br><span class="line"> */</span><br><span class="line">app.listen(3000,function () &#123;</span><br><span class="line">	console.log(&quot;服务器已经启动&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h5 id="路由（route）"><a href="#路由（route）" class="headerlink" title="路由（route）"></a>路由（route）</h5><p>路由是将请求（由 URL 和 HTTP 方法指定）路由到处理它们的代码去的一种机制<br>通过路由可以将浏览器发送的请求和Node中的函数进行关联，通过函数可以来获取用户发送的请求，或向用户返回响应。<br>路由是Express的根本，通过路由才可以在用户和服务器之间建立联系。</p>
-<h4 id="实现路由"><a href="#实现路由" class="headerlink" title="实现路由"></a>实现路由</h4><p>可以将路由定义为两个部分：<br>第一部分：HTTP请求的方法（get或post）<br>第二部分：是URL中指定的路径<br>Express中提供了一些列函数，可以让我们很方便的实现路由：<br>app.<method>(path，callback)<br>语法method指的是HTTP请求方法，比如：<br>app.get()<br>app.post()<br>path指要通过回调函数来处理的URL地址<br>callback参数是应该处理该请求并把响应发回客户端的请求处理程序</method></p>
-<h4 id="路由的运行路程"><a href="#路由的运行路程" class="headerlink" title="路由的运行路程"></a>路由的运行路程</h4><p>当Express服务器接收到一个HTTP请求时，它会查找已经为适当的HTTP方法和路径定义的路由<br>如果找到一个，Request和Response对象会被创建，并被传递给路由的回调函数<br>我们便可以通过Request对象读取请求，通过Response对象返回响应<br>Express中还提供了all()方法，可以处理两种请求。</p>
-<h4 id="Reauest对象"><a href="#Reauest对象" class="headerlink" title="Reauest对象"></a>Reauest对象</h4><p>Request对象是路由回调函数中的第一个参数，代表了用户发送给服务器的请求信息<br>通过Request对象可以读取用户发送的请求包括URL地址中的查询字符串中的参数，和post请求的请求体中的参数。</p>
+        <p>我一直都在，而你却悄然离去。</p>
+<h3 id="情景说明"><a href="#情景说明" class="headerlink" title="情景说明"></a>情景说明</h3><p>在我们日常购物（像淘宝，京东，美团等）或者注册某些网站的会员时，需要我们来填写地址，像省、市、县可以直接在下拉列表中选择，那么像这种“地址三级联动”怎么实现的呢？今天我们就通过ajax的技术，来模拟做一个地址的三级联动的功能。<br><a id="more"></a><br><img src="https://www.itsolotime.com/images/address/address-1.png" alt=""><br><img src="https://www.itsolotime.com/images/address/address-2.png" alt=""></p>
+<h3 id="HTML结构"><a href="#HTML结构" class="headerlink" title="HTML结构"></a>HTML结构</h3><p>这里我们就简单的写一下结构，不进行样式（CSS）的渲染，后期可以进行样式的优化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;收货地址三级联动&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;select id=&quot;selProvince&quot;&gt;</span><br><span class="line">  &lt;option value=&quot;&quot;&gt;--请选择省份--&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;select id=&quot;selCity&quot;&gt;</span><br><span class="line">  &lt;option value=&quot;&quot;&gt;--请选择城市--&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;select id=&quot;selCounty&quot;&gt;</span><br><span class="line">  &lt;option value=&quot;&quot;&gt;--请选择区/县--&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p><em>词条：<a href="http://www.w3school.com.cn/tags/tag_option.asp" target="_blank" rel="noopener">option 标签</a></em></p>
+<h3 id="项目分析"><a href="#项目分析" class="headerlink" title="项目分析"></a>项目分析</h3><h4 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h4><p>1、当页面打开（加载）的时候，省级下拉列表数据需要进行加载。<br>2、当选择“某省”时，相对应的“市级”列表数据进行填充。<br>3、当选择“某市”时，相对应的“区县”列表数据进行填充。<br>4、当没有选择省级时，市县级无数据显示，同理，当没有选择市级时，区县级无数据显示。</p>
+<h4 id="json数据分析"><a href="#json数据分析" class="headerlink" title="json数据分析"></a>json数据分析</h4><p>省级单位数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//直辖市数据</span><br><span class="line">&#123;</span><br><span class="line">  &quot;id&quot;: &quot;2&quot;,</span><br><span class="line">  &quot;province&quot;: &quot;北京市&quot;,</span><br><span class="line">  &quot;parent&quot;: &quot;1&quot;</span><br><span class="line">&#125;,</span><br><span class="line">//普通省级单位数据</span><br><span class="line">&#123;</span><br><span class="line">  &quot;id&quot;: &quot;36&quot;,</span><br><span class="line">  &quot;province&quot;: &quot;河北省&quot;,</span><br><span class="line">  &quot;parent&quot;: &quot;1&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>市级单位数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//直辖市数据</span><br><span class="line">&#123;</span><br><span class="line">  &quot;id&quot;: &quot;2&quot;,</span><br><span class="line">  &quot;city&quot;: &quot;北京市&quot;,</span><br><span class="line">  &quot;parent&quot;: &quot;1&quot;</span><br><span class="line">&#125;,</span><br><span class="line">//省级下属市级单位数据</span><br><span class="line">&#123;</span><br><span class="line">  &quot;id&quot;: &quot;37&quot;,</span><br><span class="line">  &quot;city&quot;: &quot;石家庄市&quot;,</span><br><span class="line">  &quot;parent&quot;: &quot;36&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
+<p>区县级单位数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//直辖市下属区单位数据</span><br><span class="line">&#123;</span><br><span class="line">  &quot;id&quot;: &quot;3&quot;,</span><br><span class="line">  &quot;county&quot;: &quot;东城区&quot;,</span><br><span class="line">  &quot;parent&quot;: &quot;2&quot;</span><br><span class="line">&#125;,</span><br><span class="line">//普通市级下属区县单位数据</span><br><span class="line">&#123;</span><br><span class="line">  &quot;id&quot;: &quot;41&quot;,</span><br><span class="line">  &quot;county&quot;: &quot;新华区&quot;,</span><br><span class="line">  &quot;parent&quot;: &quot;37&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过以上的数据我们可以分析获得：<br>1、获取省级单位（含直辖市/自治区等）可以通过数据的“id”。<br>2、省级单位获取对应市级单位可以通过：省级单位的id==市级单位的parent<br>   <em>需要注意的是：直辖市和自治区在对应关系上和普通省份是不同的，应当用id = id</em><br>3、市级单位和区县级单位的关联关系（包含直辖市和自治区）符合市级单位的id == 区县级单位的parent</p>
+<h4 id="bug分析"><a href="#bug分析" class="headerlink" title="bug分析"></a>bug分析</h4><p>1、可能会出现列表数据的紊乱，比如：市级列表中数据含有不同省对应的市级数据。</p>
+<h4 id="接口文档"><a href="#接口文档" class="headerlink" title="接口文档"></a>接口文档</h4><p>1、获取省级单位的数据</p>
+<ul>
+<li>请求方式：GET</li>
+<li>请求的url：’/getProvinces’（路由地址）</li>
+<li>请求参数：</li>
+<li>返回的数据格式：json</li>
+</ul>
+<p>2、获取市级单位的数据</p>
+<ul>
+<li>请求方式： POST</li>
+<li>请求的url： ‘/getCities’（路由地址）</li>
+<li>请求的参数: provinceId,</li>
+<li>返回的数据格式: json</li>
+</ul>
+<p>3、获取区/县单位的数据</p>
+<ul>
+<li>请求方式： GET</li>
+<li>请求的url： ‘/getCounties’（路由地址）</li>
+<li>请求的参数: cityId,</li>
+<li>返回的数据格式: json</li>
+</ul>
+<h3 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h3><h4 id="配置省级路由"><a href="#配置省级路由" class="headerlink" title="配置省级路由"></a>配置省级路由</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//引入json数据（中国省市县数据）china_area.json</span><br><span class="line">var chian_area = require(&apos;../china_area.json&apos;)</span><br><span class="line">//注册路由</span><br><span class="line">router.get(&apos;/getProvinces&apos; , funnction(req, res, next)&#123;</span><br><span class="line">	//创建一个变量来保存china_area中的省级的数据</span><br><span class="line">	var provinces = china_area.provinces;</span><br><span class="line">	//向客户端发送数据</span><br><span class="line">	res.send(provinces);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="配置市级路由"><a href="#配置市级路由" class="headerlink" title="配置市级路由"></a>配置市级路由</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">router.post(&apos;/getCities&apos; , funnction(req, res, next)&#123;</span><br><span class="line">	//创建一个变量来保存省级数据的id</span><br><span class="line">	var provinceId = req.body.provinceId;</span><br><span class="line">	//创建一个空数组，用来存放获取到的市级数据</span><br><span class="line">	var citiesArr = [];</span><br><span class="line">	//从china_area中获取市级数据并将其添加进空白数组</span><br><span class="line">	china_area.cities.forEach(funnction(city)&#123;</span><br><span class="line">		//当市级的parent值和省级单位的id相等 或者 市级单位的id和省级单位的id相等（主要针对直辖市&amp;自治区）</span><br><span class="line">		if(city.parent == provinceId || city.id == provinceId)&#123;</span><br><span class="line">			citiesArr.push(city);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	res.send(citiesArr);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="配置区县级的路由"><a href="#配置区县级的路由" class="headerlink" title="配置区县级的路由"></a>配置区县级的路由</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">router.post(&apos;/getCounties&apos; , funnction(req, res, next)&#123;</span><br><span class="line">	//获取市级单位的Id</span><br><span class="line">	var cityId = req.query.cityId;</span><br><span class="line">	//创建一个空数组，用来存放获取到的区县级数据</span><br><span class="line">	var countiesArr = [];</span><br><span class="line">    china_area.counties.forEach(function (county) &#123;</span><br><span class="line">        // 获取对应的市级单位的数据</span><br><span class="line">        if(county.parent == cityId)&#123;</span><br><span class="line">            countiesArr.push(county);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    res.send(countiesArr);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--引入jquery--&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;../js/jquery-1.11.1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">  $(function () &#123;</span><br><span class="line">    var $selProvince = $(&apos;#selProvince&apos;);</span><br><span class="line">    var $selCity = $(&apos;#selCity&apos;);</span><br><span class="line">    var $selCounty = $(&apos;#selCounty&apos;);</span><br><span class="line">    // 发送请求获取所有的省级单位的数据</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">      type: &apos;GET&apos;,</span><br><span class="line">      url: &apos;/getProvinces&apos;,</span><br><span class="line">      success: function (provinces) &#123;</span><br><span class="line">        provinces.forEach(function (province, index) &#123;</span><br><span class="line">		  //格外要注意拼串时的“空格”</span><br><span class="line">          var provinceHtml = &apos;&lt;option value=&quot;&apos; + province.id +&apos;&quot;&gt;&apos; + province.province + &apos;&lt;/option&gt;&apos;;</span><br><span class="line">          $selProvince.append(provinceHtml);</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    $selProvince.change(function () &#123;</span><br><span class="line">      // 移除之前的option(第一个除外)，防止切换省级单位引起的市级单位数据紊乱</span><br><span class="line">      $selCity.children().not(&apos;:first&apos;).remove();</span><br><span class="line">      $selCounty.children().not(&apos;:first&apos;).remove();</span><br><span class="line"></span><br><span class="line">      // 当前省级单位的id</span><br><span class="line">      var provinceId = this.value;</span><br><span class="line">      if(provinceId == &apos;&apos;)&#123;</span><br><span class="line">        return;</span><br><span class="line">      &#125;</span><br><span class="line">	  //市级单位</span><br><span class="line">      $.post(&apos;/getCities&apos;, &#123;provinceId: provinceId&#125;, function (cities) &#123;</span><br><span class="line">        cities.forEach(function (city) &#123;</span><br><span class="line">          var citiesHtml = &apos;&lt;option value=&quot;&apos; + city.id +&apos;&quot;&gt;&apos; + city.city + &apos;&lt;/option&gt;&apos;;</span><br><span class="line">          $selCity.append(citiesHtml);</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    $selCity.change(function () &#123;</span><br><span class="line">      $selCounty.children().not(&apos;:first&apos;).remove();</span><br><span class="line">	  //当前市级单位的id</span><br><span class="line">      var cityId = this.value;</span><br><span class="line">	  //区县级单位</span><br><span class="line">      $.getJSON(&apos;/getCounties&apos;, &#123;cityId: cityId&#125;, function (counties) &#123;</span><br><span class="line">        counties.forEach(function (county, index) &#123;</span><br><span class="line">          var countiesHtml = &apos;&lt;option value=&quot;&apos; + county.id +&apos;&quot;&gt;&apos; + county.county + &apos;&lt;/option&gt;&apos;;</span><br><span class="line">          $selCounty.append(countiesHtml);</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h5><p><em>1、<a href="https://www.itsolotime.com/blog/demo/json/jquery-1.11.1.js">jquery-1.11.1.js下载</a><br>2、<a href="https://www.itsolotime.com/blog/demo/json/china_area.json">china_area.json下载</a></em></p>
 <h2 id="联系小泊"><a href="#联系小泊" class="headerlink" title="联系小泊"></a>联系小泊</h2><p>email：643209899@qq.com</p>
-<p><strong>本文作者</strong>：漂小泊<br><strong>本文地址</strong>： <a href="http://www.itsolotime.com/blog/2018/01/25/login and regist/">http://www.itsolotime.com/blog/2018/01/25/login and regist/</a> <br><strong>版权声明</strong>：转载请注明出处！</p>
+<p><strong>本文作者</strong>：漂小泊<br><strong>本文地址</strong>： <a href="https://www.itsolotime.com/blog/2018/02/01/receiver address/">https://www.itsolotime.com/blog/2018/02/01/receiver address/</a> <br><strong>版权声明</strong>：转载请注明出处！</p>
 
       
     </div>
@@ -543,14 +535,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="http://www.itsolotime.com/blog/images/wrchatpay.png" alt="漂小泊 微信支付"/>
+        <img id="wechat_qr" src="https://www.itsolotime.com/blog/images/wrchatpay.png" alt="漂小泊 微信支付"/>
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="http://www.itsolotime.com/blog/images/alipay.jpg" alt="漂小泊 支付宝"/>
+        <img id="alipay_qr" src="https://www.itsolotime.com/blog/images/alipay.jpg" alt="漂小泊 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -571,21 +563,13 @@
           
             <a href="/blog/tags/原创/" rel="tag"><i class="fa fa-tag"></i> 原创</a>
           
-            <a href="/blog/tags/MongoDB/" rel="tag"><i class="fa fa-tag"></i> MongoDB</a>
-          
-            <a href="/blog/tags/Mongoose/" rel="tag"><i class="fa fa-tag"></i> Mongoose</a>
-          
-            <a href="/blog/tags/Express/" rel="tag"><i class="fa fa-tag"></i> Express</a>
-          
-            <a href="/blog/tags/npm/" rel="tag"><i class="fa fa-tag"></i> npm</a>
-          
-            <a href="/blog/tags/Node-js/" rel="tag"><i class="fa fa-tag"></i> Node.js</a>
+            <a href="/blog/tags/ajax/" rel="tag"><i class="fa fa-tag"></i> ajax</a>
           
         </div>
       
 
       
-      <br><div id="page-icp"><a  target="_blank" href="http://www.miitbeian.gov.cn" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://mumu.itsolotime.com/img/icp.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#000;">鲁ICP备16027817号</p></a></div>
+      <br><div id="page-icp"><a  target="_blank" href="http://www.miitbeian.gov.cn" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="https://www.itsolotime.com/mumu/img/icp.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#000;">鲁ICP备16027817号</p></a></div>
       
         <div class="post-widgets">
         
@@ -608,8 +592,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2018/01/25/node.js usage/" rel="next" title="Node.js介绍和安装">
-                <i class="fa fa-chevron-left"></i> Node.js介绍和安装
+              <a href="/blog/2018/01/25/mongoDB usage/" rel="next" title="MongoDB的安装">
+                <i class="fa fa-chevron-left"></i> MongoDB的安装
               </a>
             
           </div>
@@ -617,6 +601,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/02/04/xbsj chrome command/" rel="prev" title="小泊随記chrome插件命令簿">
+                小泊随記chrome插件命令簿 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -644,11 +632,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzIwMS85NzU4"></div>
-    </div>
 
   
 
@@ -702,7 +685,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -713,7 +696,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -724,7 +707,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -797,7 +780,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能简述"><span class="nav-number">1.</span> <span class="nav-text">功能简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引读：数据库（Database）"><span class="nav-number">2.</span> <span class="nav-text">引读：数据库（Database）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB"><span class="nav-number">3.</span> <span class="nav-text">MongoDB</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他配置"><span class="nav-number">3.2.</span> <span class="nav-text">其他配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Express"><span class="nav-number">4.</span> <span class="nav-text">Express</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介-1"><span class="nav-number">4.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">4.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-number">4.3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#路由（route）"><span class="nav-number">4.3.1.</span> <span class="nav-text">路由（route）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现路由"><span class="nav-number">4.4.</span> <span class="nav-text">实现路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路由的运行路程"><span class="nav-number">4.5.</span> <span class="nav-text">路由的运行路程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reauest对象"><span class="nav-number">4.6.</span> <span class="nav-text">Reauest对象</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联系小泊"><span class="nav-number"></span> <span class="nav-text">联系小泊</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#情景说明"><span class="nav-number">1.</span> <span class="nav-text">情景说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML结构"><span class="nav-number">2.</span> <span class="nav-text">HTML结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目分析"><span class="nav-number">3.</span> <span class="nav-text">项目分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析"><span class="nav-number">3.1.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#json数据分析"><span class="nav-number">3.2.</span> <span class="nav-text">json数据分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bug分析"><span class="nav-number">3.3.</span> <span class="nav-text">bug分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口文档"><span class="nav-number">3.4.</span> <span class="nav-text">接口文档</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器配置"><span class="nav-number">4.</span> <span class="nav-text">服务器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置省级路由"><span class="nav-number">4.1.</span> <span class="nav-text">配置省级路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置市级路由"><span class="nav-number">4.2.</span> <span class="nav-text">配置市级路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置区县级的路由"><span class="nav-number">4.3.</span> <span class="nav-text">配置区县级的路由</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端配置"><span class="nav-number">5.</span> <span class="nav-text">客户端配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#附件"><span class="nav-number">5.0.1.</span> <span class="nav-text">附件</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联系小泊"><span class="nav-number"></span> <span class="nav-text">联系小泊</span></a></div>
             
 
           </div>
@@ -986,17 +969,6 @@
 
 
 
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
   
 
 

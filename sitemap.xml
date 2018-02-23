@@ -2,91 +2,119 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.itsolotime.com/blog/2018/01/25/login%20and%20regist/</loc>
+    <loc>https://www.itsolotime.com/blog/2018/02/05/js%20tests/</loc>
     
-    <lastmod>2018-01-26T12:29:08.891Z</lastmod>
+    <lastmod>2018-02-23T01:26:12.044Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.itsolotime.com/blog/2018/01/23/linux%20route/</loc>
+    <loc>https://www.itsolotime.com/blog/2018/02/04/xbsj%20chrome%20command/</loc>
+    
+    <lastmod>2018-02-23T01:23:40.086Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/02/04/chrome%20plug/</loc>
+    
+    <lastmod>2018-02-23T01:23:24.582Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/01/11/Revised%20instructions/</loc>
+    
+    <lastmod>2018-02-04T10:42:00.243Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/02/01/receiver%20address/</loc>
+    
+    <lastmod>2018-02-01T07:36:32.963Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/01/25/mongoDB%20usage/</loc>
+    
+    <lastmod>2018-01-30T12:51:34.517Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/01/25/node.js%20usage/</loc>
+    
+    <lastmod>2018-01-30T12:37:25.610Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/01/18/course%20description/</loc>
+    
+    <lastmod>2018-01-30T12:35:15.504Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/01/18/Scrolling%20bulletin%20board/</loc>
+    
+    <lastmod>2018-01-30T12:32:41.080Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/01/22/Webstorm%20usage/</loc>
+    
+    <lastmod>2018-01-30T12:31:14.856Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/01/19/Who%20did%20you%20meet/</loc>
+    
+    <lastmod>2018-01-30T12:29:37.173Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/logs/index.html</loc>
+    
+    <lastmod>2018-01-30T10:26:51.252Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itsolotime.com/blog/2018/01/23/linux%20route/</loc>
     
     <lastmod>2018-01-25T07:19:35.622Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.itsolotime.com/blog/2018/01/25/node.js%20usage/</loc>
-    
-    <lastmod>2018-01-25T07:19:29.564Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.itsolotime.com/blog/2018/01/22/Webstorm%20usage/</loc>
-    
-    <lastmod>2018-01-25T07:19:23.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.itsolotime.com/blog/logs/index.html</loc>
-    
-    <lastmod>2018-01-25T06:09:28.391Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.itsolotime.com/blog/2018/01/19/Who%20did%20you%20meet/</loc>
-    
-    <lastmod>2018-01-20T10:26:57.345Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.itsolotime.com/blog/2018/01/11/Revised%20instructions/</loc>
-    
-    <lastmod>2018-01-20T10:23:41.127Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.itsolotime.com/blog/2018/01/18/Scrolling%20bulletin%20board/</loc>
-    
-    <lastmod>2018-01-20T10:20:43.727Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.itsolotime.com/blog/2018/01/18/course%20description/</loc>
-    
-    <lastmod>2018-01-20T03:44:32.547Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.itsolotime.com/blog/about/index.html</loc>
+    <loc>https://www.itsolotime.com/blog/about/index.html</loc>
     
     <lastmod>2018-01-19T14:52:50.909Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.itsolotime.com/blog/404.html</loc>
+    <loc>https://www.itsolotime.com/blog/404.html</loc>
     
     <lastmod>2018-01-12T15:59:36.857Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.itsolotime.com/blog/categories/index.html</loc>
+    <loc>https://www.itsolotime.com/blog/categories/index.html</loc>
     
     <lastmod>2018-01-11T12:24:45.179Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.itsolotime.com/blog/tags/index.html</loc>
+    <loc>https://www.itsolotime.com/blog/tags/index.html</loc>
     
     <lastmod>2018-01-11T12:23:40.297Z</lastmod>
     
